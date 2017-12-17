@@ -1,10 +1,7 @@
-import { NgModule } from '@angular/core';
+import {ModuleWithProviders} from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-
-const routes: Routes = [];
-
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
-})
-export class AppRoutingModule { }
+const routes: Routes = [
+  { path: '', redirectTo: 'pages', pathMatch: 'full' },
+  { path: '**', redirectTo: 'pages/index' }
+];
+export const routing: ModuleWithProviders = RouterModule.forRoot(routes, { useHash: true });
