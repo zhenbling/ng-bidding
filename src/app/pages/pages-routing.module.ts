@@ -27,8 +27,11 @@ export const routes: Routes = [
     path: 'pages',
     component: PagesComponent,
     children: [
-      // { path: '', redirectTo: 'index', pathMatch: 'full' },
+      { path: '', redirectTo: 'index', pathMatch: 'full' },
       // { path: 'index', component: IndexComponent },
+      {path: 'index',
+        loadChildren: './index/index.module#IndexModule'
+      }
     ]
   }
 ];

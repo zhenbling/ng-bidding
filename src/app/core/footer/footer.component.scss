@@ -1,0 +1,23 @@
+$height: 60px;
+$width: 1200px;
+$color: #4cdbec;
+.foot {
+  div {
+    height: $height;
+    line-height: $height;
+    text-align: center;
+    span:nth-of-type(1) {
+      color: $color;
+      margin: 0;
+      font-size: 14px;
+    }
+    span:nth-of-type(2) {
+      margin: 0 30px 0 0;
+      font-size: 14px;
+    }
+    span:nth-of-type(3) {
+      margin: 0 0 0 30px;
+      font-size: 14px;
+    }
+  }
+}

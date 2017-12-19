@@ -9,6 +9,7 @@ import {CoreModule} from '../core/core.module';
 import { LoginComponent } from './login/login.component';
 import { IndexComponent } from './index/index.component';
 import { RegisterComponent } from './register/register.component';
+import { BannerComponent } from './index/components/banner/banner.component';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import { RegisterComponent } from './register/register.component';
     PagesComponent,
     LoginComponent,
     // IndexComponent,
+    // BannerComponent,
     // RegisterComponent
   ]
 })

@@ -2,14 +2,18 @@
   <!--pages works!-->
 <!--</p>-->
 <!--The content below is only a placeholder and can be replaced.-->
+
 <div class="site">
-  <header style="background-color: aquamarine">
+  <aside class="rightBar">
+    <app-aside></app-aside>
+  </aside>
+  <header>
     <app-header></app-header>
   </header>
   <main>
-    <router-outlet></router-outlet>
+    <router-outlet style="width: 100%; min-height: 100%"></router-outlet>
   </main>
-  <footer style="background-color: #ccf;">
+  <footer>
     <app-footer></app-footer>
   </footer>
 </div>
