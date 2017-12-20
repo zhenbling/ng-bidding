@@ -1,16 +1,18 @@
 $height: 50px;
 $width: 1200px;
+$fontcolorg: #363636;
 $color: #4cdbec;
-$fontcolor: #363636;
-$backcolorgl: #f8f8f9;
-$backcolorgh: #e4e4e4;
+$fontcolory: #FF9900;
+$backcolorlg: #f8f8f9;
+$backcolordg: #e4e4e4;
 $bordercolor: #949494;
+
 a{
   text-decoration: none;
 }
 .headertop{
   .navbar-default {
-    background-color: $backcolorgh;
+    background-color: $backcolordg;
     .container {
 
       @media screen and (min-width: 1200px) {
@@ -22,7 +24,7 @@ a{
         text-align: center;
 
         #dropheader{
-          color: $fontcolor;
+          color: $fontcolorg;
           font-size: 12px;
 
         }
@@ -66,7 +68,7 @@ a{
   background-color: #fff;
 }
 .middle {
-  background-color: $backcolorgl;
+  background-color: $backcolorlg;
   margin-top: $height;
   height: 160px;
   div {
@@ -126,66 +128,80 @@ a{
 
 }
 div.submenu {
-  background-color: $backcolorgl;
+  background-color: $backcolorlg;
+
   ul.nav-tabs {
     margin: 0 auto;
     width: $width;
     height: 50px;
+
     li {
       height: 50px;
       line-height: 50px;
-      color: $fontcolor;
+      color: $fontcolorg;
       padding: 0 50px;
       font-size: 16px;
+      cursor: pointer;
       a {
         padding: 0;
       }
 
-      &:nth-of-type(1) {
 
-        width: 222px;
-        padding: 0 20px;
+    }
+    //在除了主页的其他页面
+    .otherpage {
+      padding: 0 50px 0 16px;
+
+    }
+    //按钮激活时
+    .active {
+      color: $color;
+    }
+    .indexButton {
+
+      width: 222px;
+      padding: 0 20px;
+      background-color: $color;
+      color: #fff;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+      #dropfirst {
+
+        border: 0;
         background-color: $color;
-        color: #fff;
-        border-radius: 4px;
-        font-size: 16px;
-          #dropfirst {
-
-            border: 0;
-            background-color: $color;
-          }
-                span img{
-                  margin-right: 14px;
-                }
-                .glyphicon {
-                  line-height: 50px;
-                }
-        .dropdown-menu {
-          width: 222px;
+      }
+      span img{
+        margin-right: 14px;
+      }
+      .glyphicon {
+        line-height: 50px;
+      }
+      .dropdown-menu {
+        width: 222px;
+        background-color: rgba(40, 40, 40, 0.65);
+        margin: 0;
+        padding: 0;
+        border-radius: 0;
+        li {
+          width: 100%;
           background-color: rgba(40, 40, 40, 0.65);
           margin: 0;
           padding: 0;
           border-radius: 0;
-          li {
-            width: 100%;
-            background-color: rgba(40, 40, 40, 0.65);
-            margin: 0;
-            padding: 0;
-            border-radius: 0;
-            padding: 0 20px;
-            height: 80px;
+          padding: 0 20px;
+          height: 80px;
+          line-height: 80px;
+          color: #fff;
+          .gradient {
+            height: 1px;
+            background: -webkit-linear-gradient(left, rgba(255,255,255,0.2), #fff, rgba(255,255,255,0.2));
+            background: -o-linear-gradient(left, rgba(255,255,255,0.2), #fff, rgba(255,255,255,0.2)); /* Opera 11.1 - 12.0 */
+            background: -moz-linear-gradient(left, rgba(255,255,255,0.2), #fff, rgba(255,255,255,0.2)); /* Firefox 3.6 - 15 */
+            background: linear-gradient(to right, rgba(255,255,255,0.2), #fff, rgba(255,255,255,0.2)); /* 标准的语法 */
+          }
+          .glyphicon {
             line-height: 80px;
-            color: #fff;
-            .gradient {
-              height: 1px;
-              background: -webkit-linear-gradient(left, rgba(255,255,255,0.2), #fff, rgba(255,255,255,0.2));
-              background: -o-linear-gradient(left, rgba(255,255,255,0.2), #fff, rgba(255,255,255,0.2)); /* Opera 11.1 - 12.0 */
-              background: -moz-linear-gradient(left, rgba(255,255,255,0.2), #fff, rgba(255,255,255,0.2)); /* Firefox 3.6 - 15 */
-              background: linear-gradient(to right, rgba(255,255,255,0.2), #fff, rgba(255,255,255,0.2)); /* 标准的语法 */
-              }
-            .glyphicon {
-              line-height: 80px;
-            }
           }
         }
       }
@@ -269,6 +285,13 @@ div.submenu {
   //    line-height: 80px;
   //  }
   //}
+}
+//在主页之外的其他页面
+div.borderbom {
+  border-bottom: 2px solid $color;
+  .nav-tabs {
+    border: 0;
+  }
 }
 .nav > li > a:hover, .nav > li > a:focus {
   background-color: $color;

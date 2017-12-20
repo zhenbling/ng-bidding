@@ -53,7 +53,7 @@
       </div>
     </div>
   </div>
-  <div class="submenu">
+  <div class="submenu" [class.borderbom]="!showButton">
     <!--<nav class="navbar navbar-default">-->
       <!--<div class="container">-->
         <!--<div class="nav navbar-nav dropdown">-->
@@ -118,7 +118,7 @@
     <!--</nav>-->
     <!--<div>-->
       <ul class="nav nav-tabs">
-        <li class="dropdown open">
+        <li class="dropdown open indexButton" *ngIf = "showButton">
           <button id="dropfirst" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true" disabled>
             <span><img src="http://placehold.it/18x18" alt="图标"></span>
             <span>全部商品分类</span>
@@ -158,13 +158,13 @@
 
 
         </li>
-        <li role="presentation">
+        <li role="presentation" [class.otherpage]="!showbutton">
           <span>今日竞标</span>
         </li>
-        <li role="presentation">
+        <li role="presentation" [class.otherpage]="showbutton">
           <span>今日询价</span>
         </li>
-        <li role="presentation">
+        <li role="presentation" [class.otherpage]="showbutton">
           <span>历史竞标记录</span>
         </li>
       </ul>

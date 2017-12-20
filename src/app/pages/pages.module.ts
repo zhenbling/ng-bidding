@@ -7,9 +7,8 @@ import { routing } from './pages-routing.module';
 import { PagesComponent } from './pages.component';
 import {CoreModule} from '../core/core.module';
 import { LoginComponent } from './login/login.component';
-import { IndexComponent } from './index/index.component';
-import { RegisterComponent } from './register/register.component';
-import { BannerComponent } from './index/components/banner/banner.component';
+
+import { CatagoryDetailComponent } from './catagory-detail/catagory-detail.component';
 
 
 @NgModule({
@@ -19,9 +18,7 @@ import { BannerComponent } from './index/components/banner/banner.component';
   declarations: [
     PagesComponent,
     LoginComponent,
-    // IndexComponent,
-    // BannerComponent,
-    // RegisterComponent
+    CatagoryDetailComponent
   ]
 })
 export class PagesModule {

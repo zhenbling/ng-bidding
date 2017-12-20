@@ -5,9 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { PagesComponent } from './pages.component';
 import { ModuleWithProviders } from '@angular/core';
 import {LoginComponent} from './login/login.component';
-import {IndexComponent} from './index/index.component';
-import {RegisterModule} from './register/register.module';
-import {RegisterComponent} from "./register/register.component";
+import {CatagoryDetailComponent} from './catagory-detail/catagory-detail.component';
 
 // noinspection TypeScriptValidateTypes
 
@@ -31,7 +29,8 @@ export const routes: Routes = [
       // { path: 'index', component: IndexComponent },
       {path: 'index',
         loadChildren: './index/index.module#IndexModule'
-      }
+      },
+      { path: 'catagorydetail', component: CatagoryDetailComponent}
     ]
   }
 ];
