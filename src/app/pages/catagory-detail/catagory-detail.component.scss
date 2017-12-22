@@ -6,6 +6,10 @@ $fontcolory: #FF9900;
 $backcolorlg: #f8f8f9;
 $backcolordg: #e4e4e4;
 $bordercolor: #949494;
+a {
+  text-decoration: none;
+  color: $fontcolorg;
+}
 .list{
   width: $width;
   margin: 0 auto;
@@ -15,6 +19,24 @@ nav {
   height: $height;
   line-height: $height;
   font-size: 16px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.35);
+  ol {
+    width: $width;
+    margin: 0 auto;
+    background-color: $backcolorlg;
+    padding: 0 16px;
+    li {
+      a {
 
+      }
+    }
+  }
+  .breadcrumb > li + li::before {
+    padding: 6px 10px 0;
+    content: url(http://placehold.it/14x14);
+  }
 
+}
+.clock {
+  margin-top: 36px;
 }

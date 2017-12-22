@@ -9,6 +9,9 @@ import {CoreModule} from '../core/core.module';
 import { LoginComponent } from './login/login.component';
 
 import { CatagoryDetailComponent } from './catagory-detail/catagory-detail.component';
+import { ClockComponent } from './catagory-detail/components/clock/clock.component';
+import { OrderItemComponent } from './catagory-detail/components/order-item/order-item.component';
+import { StepperComponent } from './catagory-detail/components/stepper/stepper.component';
 
 
 @NgModule({
@@ -18,7 +21,10 @@ import { CatagoryDetailComponent } from './catagory-detail/catagory-detail.compo
   declarations: [
     PagesComponent,
     LoginComponent,
-    CatagoryDetailComponent
+    CatagoryDetailComponent,
+    ClockComponent,
+    OrderItemComponent,
+    StepperComponent
   ]
 })
 export class PagesModule {

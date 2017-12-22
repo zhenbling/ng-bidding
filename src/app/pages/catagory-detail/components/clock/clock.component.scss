@@ -1,0 +1,46 @@
+$height: 52px;
+$width: 1200px;
+$fontcolorg: #363636;
+$color: #4cdbec;
+$fontcolory: #FF9900;
+$backcolorlg: #f8f8f9;
+$backcolordg: #f2f2f2;
+$bordercolor: #cccccc;
+p {
+  margin: 0;
+  padding: 0;
+}
+section {
+  background-color: $backcolordg;
+  border: 1px solid $bordercolor;
+  height: $height;
+  width: $width;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  color: $fontcolorg;
+  p {
+    margin: 0 10px;
+    font-size: 16px;
+  }
+  .hidden {
+    display: none;
+  }
+  .will {
+    color: $fontcolory;
+    }
+  .ing {
+    button {
+      border: 0;
+      border-radius: 4px;
+      background-color: $fontcolory;
+      color: #fff;
+      height: 32px;
+      line-height: 32px;
+      margin-right: 6px;
+    }
+  }
+}
+

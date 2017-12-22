@@ -148,9 +148,9 @@ div.submenu {
 
 
     }
-    //在除了主页的其他页面
+
     .otherpage {
-      padding: 0 50px 0 16px;
+      //padding: 0 50px 0 16px;
 
     }
     //按钮激活时
@@ -291,6 +291,10 @@ div.borderbom {
   border-bottom: 2px solid $color;
   .nav-tabs {
     border: 0;
+    .otherpage {
+      padding: 0 50px 0 16px;
+
+    }
   }
 }
 .nav > li > a:hover, .nav > li > a:focus {

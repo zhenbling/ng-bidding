@@ -1,15 +1,16 @@
 <nav>
   <ol class="breadcrumb">
-    <li><a href="#">今日竞价</a></li>
-    <li><a href="#">变压器</a></li>
+    <li><a href="javascript:;" [routerLink]="['/pages/index']">今日竞价</a></li>
+    <li><a href="javascript:;">变压器</a></li>
     <!--<li class="active">Data</li>-->
   </ol>
 </nav>
 <div class="list">
-  <div class="click">
-
+  <div class="clock">
+    <app-clock [startTime]="startTime" [endTime]="endTime"></app-clock>
   </div>
   <div class="list-item">
+    <app-order-item></app-order-item>
 
   </div>
 
