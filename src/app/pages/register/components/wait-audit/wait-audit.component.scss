@@ -5,6 +5,7 @@ div.header {
 }
 div.body {
   width:100%;
+  height:1000px;
 }
 div.footer {
   width:100%;
@@ -37,10 +38,10 @@ a.yellow:link {
   color:#FFB717;
   text-decoration: none;
 }
-//a:link {
-//  color:#6D6D6D;
-//  text-decoration: none;
-//}
+a:link {
+  color:#6D6D6D;
+  text-decoration: none;
+}
 .col-md-10 {
   height:2px;
 }
@@ -95,75 +96,7 @@ input[type="radio"], input[type="checkbox"] {
   min-width:102px;
 
 }
-.modal-content {
-  width:916px;
-  height:819px;
-  background-color: #000;
-  position:relative;
-  border:1px solid #000;
-  border-radius: 0;
-  right:10%;
-  top:1%;
-}
-.modal-body {
-  margin-top:20px;
-  width:100%;
-  height:661px;
-  padding-bottom:0;
-}
-//.glyphicon {
-//  top:300px;
-//}
-.modal-footer {
-  text-align: left;
-  //padding-top:0;
-}
-img.on {
-  border:2px solid #4DBECD;;
-}
-.modal-header {
-  padding-bottom:0;
-}
-
-.selectFile{
-  width: 80px;
-  height: 30px;
-  opacity: 0;
-  position: absolute;
-  top:0;
-  left:0;
-}
-.newFile{
-  width: 80px;
-  height: 30px;
-  color:#FFB717;;
-  background: #fff;
-  display: inline-block;
-  text-align: left;
-  margin-left:5px;
-  line-height: 30px;
-  text-decoration: underline;
-}
-.img{
-  width: 100px;height: auto;margin-right: 10px;display: inline-block;float: left;position: relative;
-}
-.file-div{
-  position: relative; width: 80px;height: 60px;display: inline-block;float: left;text-align: center;
-}
-.file-div span{font-size: 12px;}
- li.on {
-  background-color: #fff;
-}
-.carousel-indicators {
-  left:36%;
-}
-ol.carousel-indicators li {
-  width:46px;
-  height:41px;
-  border-radius: 0;
-  background: url("http://placehold.it/46x41");
-}
-ol.carousel-indicators li.active {
-  border:1px solid #33cccc;
+.row {
+  margin-right:0;
 }
 

@@ -8,15 +8,15 @@ import { Component, OnInit } from '@angular/core';
 export class CatagoryDetailComponent implements OnInit {
 
   startTime = new Date(Date.parse('2017-12-21T00:00:00')).getTime();
-  endTime = new Date(Date.parse('2017-12-21T12:00:00')).getTime();
+  endTime = new Date(Date.parse('2017-12-22T10:56:00')).getTime();
 
 
 
   constructor() { }
 
   ngOnInit() {
-    console.log('?', this.startTime);
-    console.log('www', this.endTime);
+    // console.log('?', this.startTime);
+    // console.log('www', this.endTime);
   }
 
 }

@@ -4,8 +4,15 @@
 import { Routes, RouterModule } from '@angular/router';
 import { PagesComponent } from './pages.component';
 import { ModuleWithProviders } from '@angular/core';
-import {LoginComponent} from './login/login.component';
+
+
 import {CatagoryDetailComponent} from './catagory-detail/catagory-detail.component';
+import {LoginComponent} from './login/login.component';
+
+// import {LoginPartComponent} from './login/components/login-part/login-part.component';
+// import {FindPwdComponent} from './login/components/find-pwd/find-pwd.component';
+
+
 
 // noinspection TypeScriptValidateTypes
 
@@ -14,9 +21,10 @@ import {CatagoryDetailComponent} from './catagory-detail/catagory-detail.compone
 export const routes: Routes = [
   {
     path: 'login',
-    component: LoginComponent
+    loadChildren: './login/login.module#LoginModule'
+    // component: LoginComponent
   },
-  // { path: 'weather', loadChildren: './weather/weather.module#WeatherModule' }
+
   {
     path: 'register',
     loadChildren: './register/register.module#RegisterModule'
@@ -27,10 +35,14 @@ export const routes: Routes = [
     children: [
       { path: '', redirectTo: 'index', pathMatch: 'full' },
       // { path: 'index', component: IndexComponent },
-      {path: 'index',
+      {
+        path: 'index',
         loadChildren: './index/index.module#IndexModule'
       },
-      { path: 'catagorydetail', component: CatagoryDetailComponent}
+      {
+        path: 'catagorydetail',
+        component: CatagoryDetailComponent
+      }
     ]
   }
 ];

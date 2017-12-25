@@ -1,0 +1,81 @@
+<!--<p>-->
+  <!--audit-result works!-->
+<!--</p>-->
+<div class="body">
+  <div class="step">
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-2" style="padding-top:30px;">
+        <div class="row">
+          <div class="col-md-2">
+            <div class="round blue"><span>1</span></div>
+          </div>
+          <div class="col-md-10">
+            <div class="line on"></div>
+          </div>
+        </div>
+        <div class="row">
+          <span>填写基本信息</span>
+        </div>
+      </div>
+      <div class="col-md-2" style="padding-top:30px;">
+        <div class="row">
+          <div class="col-md-2">
+            <div class="round blue"><span>2</span></div>
+          </div>
+          <div class="col-md-10">
+            <div class="line on"></div>
+          </div>
+        </div>
+        <div class="row">
+          <span>完善资质认证</span>
+        </div>
+      </div>
+      <div class="col-md-2" style="padding-top:30px;">
+        <div class="row">
+          <div class="col-md-2">
+            <div class="round blue"><span>3</span></div>
+          </div>
+          <div class="col-md-10">
+            <div class="line on"></div>
+          </div>
+        </div>
+        <div class="row">
+          <span>等待客服审核</span>
+        </div>
+      </div>
+      <div class="col-md-2" style="padding-top:30px;">
+        <div class="row">
+          <div class="col-md-2">
+            <div class="round">
+              <div class="round blue"><span>4</span></div>
+            </div>
+          </div>
+          <div class="col-md-10">
+            <div class="line on"></div>
+          </div>
+        </div>
+        <div class="row">
+          <span>审核完成</span>
+        </div>
+      </div>
+      <div class="col-md-2"></div>
+    </div>
+  </div>
+  <div class="regPart" style="margin-left: 40%;margin-top:20px;;">
+
+    <span style="padding-left: 266px;color:#AEAEAE">已有账号？<a href="#nowhere" [routerLink]="['/login']" style="color:#FFB717;">请登录</a></span>
+    <div class="row">
+      <img src="http://placehold.it/106x93"  style="margin-left: 100px;margin-top:120px;" />
+      <p style="margin-left:70px;margin-top: 20px;margin-bottom: 10px;color:#FFB717;font-size:20px;">很抱歉，审核未通过！</p>
+      <span style="color:#000;">未通过原因：</span>
+      <p>营业执照图片模糊不清晰，请重新上传。请提供正确的注册名称和营业执照。</p>
+    </div>
+    <div class="row">
+      <a href="javascript:;" class="btn btn-primary btn-lg" [routerLink]="['/register']" style="margin:30px 80px;width:140px;height:40px;color:#fff;">重新提交</a>
+    </div>
+    <div class="row">
+      <a href="javascript:;" class="btn btn-default btn-lg" [routerLink]="['/index']" style="margin-left:80px;width:140px;height:40px;">下次再说</a>
+    </div>
+  </div>
+</div>

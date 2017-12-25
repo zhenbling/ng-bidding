@@ -4,10 +4,11 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { AsideComponent } from './aside/aside.component';
+import {CommonModule} from '@angular/common';
 @NgModule({
   imports: [
-    HttpClientModule,
-    BrowserAnimationsModule
+    CommonModule,
+    HttpClientModule
   ],
   declarations: [
     HeaderComponent,

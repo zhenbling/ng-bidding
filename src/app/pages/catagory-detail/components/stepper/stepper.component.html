@@ -1,10 +1,43 @@
-<!--<span class="minus" [ngClass]="{'disabled':_disabledMinus}" (click)="_minus()"><em>-</em></span>-->
-<!--<div class="input">-->
-  <!--<input type="tel" #inputNumber [(ngModel)]="value" (blur)="_blur()"-->
-         <!--[disabled]="disabled"-->
-         <!--[attr.min]="min"-->
-         <!--[attr.max]="max"-->
-         <!--[attr.step]="_step"-->
-         <!--autocomplete="off">-->
+
+<div class="stepper">
+  <span class="minus"
+        [ngClass]="{'disabled':_disabledMinus}"
+        (click)="_minus()"
+  >
+    <em>-</em>
+  </span>
+  <div class="input">
+    <span>
+      当前价：
+    </span>
+    <input type="tel"
+           name="stepper"
+           #inputNumber
+
+           [disabled]="disabled"
+           [attr.min]="min"
+           [attr.max]="max"
+           [attr.step]="_step"
+           autocomplete="off"
+           placeholder="5975.00"
+    >
+  </div>
+  <span class="plus"
+        [ngClass]="{'disabled':_disabledPlus}"
+        (click)="_plus()"
+  >
+  <em>+</em>
+  </span>
+</div>
+<!--<div class="stepper">-->
+  <!--<span>-->
+    <!--<em>-</em>-->
+  <!--</span>-->
+  <!--<div>-->
+    <!--<input type="text">-->
+  <!--</div>-->
+  <!--<span>-->
+    <!--<em>+</em>-->
+  <!--</span>-->
+
 <!--</div>-->
-<!--<span class="plus" [ngClass]="{'disabled':_disabledPlus}" (click)="_plus()"><em>+</em></span>-->

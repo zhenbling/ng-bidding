@@ -6,6 +6,7 @@ import {CatagoryListComponent} from './components/catagory-list/catagory-list.co
 import {DetailListComponent} from './components/detail-list/detail-list.component';
 import {routing} from './index.routing';
 import {IndexComponent} from './index.component';
+import {RouterModule} from '@angular/router';
 
 
 @NgModule({

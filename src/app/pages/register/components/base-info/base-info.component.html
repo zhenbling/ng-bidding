@@ -1,3 +1,135 @@
-<p>
-  base-info works!
-</p>
+<div class="body">
+  <div class="step">
+    <div class="row" style="margin-right:0;">
+      <div class="col-md-2"></div>
+      <div class="col-md-2" style="padding-top:30px;">
+        <div class="row">
+          <div class="col-md-2">
+            <div class="round blue"><span>1</span></div>
+          </div>
+          <div class="col-md-10">
+            <div class="line on"></div>
+          </div>
+        </div>
+        <div class="row">
+          <span>填写基本信息</span>
+        </div>
+      </div>
+      <div class="col-md-2" style="padding-top:30px;">
+        <div class="row">
+          <div class="col-md-2">
+            <div class="round"><span>2</span></div>
+          </div>
+          <div class="col-md-10">
+            <div class="line"></div>
+          </div>
+        </div>
+        <div class="row">
+          <span>完善资质认证</span>
+        </div>
+      </div>
+      <div class="col-md-2" style="padding-top:30px;">
+        <div class="row">
+          <div class="col-md-2">
+            <div class="round"><span>3</span></div>
+          </div>
+          <div class="col-md-10">
+            <div class="line"></div>
+          </div>
+        </div>
+        <div class="row">
+          <span>等待客服审核</span>
+        </div>
+      </div>
+      <div class="col-md-2" style="padding-top:30px;">
+        <div class="row">
+          <div class="col-md-2">
+            <div class="round">
+              <div class="round"><span>4</span></div>
+            </div>
+          </div>
+          <div class="col-md-10">
+            <div class="line"></div>
+          </div>
+        </div>
+        <div class="row">
+          <span>审核完成</span>
+        </div>
+      </div>
+      <div class="col-md-2"></div>
+    </div>
+  </div>
+  <div class="regPart" style="margin-left: 38%;margin-top:20px;width:380px;">
+
+    <span style="padding-left: 266px;color:#AEAEAE">已有账号？<a href="#nowhere" [routerLink]="['/login']" style="color:#FFB717;" class="yellow">请登录</a></span>
+    <form class="form-horizontal" role="form" style="margin-top:30px;" [formGroup]="regForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <span for="mobilenumber" class="col-md-3" style="padding-top: 10px;color:#000;">手机号码</span>
+        <div class="col-md-6">
+          <input type="text" class="form-control" name="mobileNumber" placeholder="请输入手机号" formControlName="mobileNumber">
+        </div>
+      </div>
+      <div class="form-group">
+        <span for="checkcode" class="col-md-3" style="padding-top: 10px;color:#000;">手机验证码</span>
+        <div class="col-md-5">
+          <div class="input-group">
+            <input type="text" class="form-control" id="checkcode" placeholder="请输入手机验证码" formControlName="checkCode">
+          </div>
+        </div>
+        <div class="col-md-4" style="padding-left:0;">
+          <button class="btn btn-link" type="button" (click)="getIdentifyCode()" [disabled]="isDisabled" style="border:none;background: #f2f2f2;width:113%;height:43px;color:#6D6D6D;font-size:16px;text-decoration: none;" >{{codeMsg}}</button>
+        </div>
+      </div>
+      <div class="form-group">
+        <span for="password" class="col-md-3" style="padding-top: 10px;color:#000;">设置密码</span>
+        <div class="col-md-6">
+          <input type="password" class="form-control" id="password" placeholder="请输入密码" formControlName="passWord">
+        </div>
+      </div>
+      <div class="form-group">
+        <span for="company" class="col-md-3" style="padding-top: 10px;color:#000;">公司名称</span>
+        <div class="col-md-6">
+          <input type="text" class="form-control" id="company" placeholder="请输入公司名称" formControlName="companyName">
+        </div>
+      </div>
+      <div class="form-group">
+        <span for="contact" class="col-md-3" style="padding-top: 10px;color:#000;">联系人</span>
+        <div class="col-md-6">
+          <input type="text" class="form-control" id="contact" placeholder="请输入联系人" formControlName="contactName">
+        </div>
+      </div>
+      <div class="row" style="margin-top:40px;">
+        <input type="checkbox" class="col-md-1 check">
+        <div class="col-md-11" style="padding-right:0px;">
+          <span style="color:#6D6D6D;">我已认真阅读并同意</span><a href="#nowhere" class="yellow" data-toggle="modal" data-target="#myModal" style="color:#FFB717;text-decoration: none;">《易智造云工厂竞标系统用户条款》</a>
+          <p style="padding:10px 0;">会员认证还差一步，完善会员认证，即可开始参与竞标。</p>
+          <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                  <h4 class="modal-title" id="myModalLabel">《易智造云工厂竞标系统用户条款》</h4>
+                </div>
+                <div class="modal-body">
+                  易智造云工厂竞标系统用户条款易智造云工厂竞标系统用户条款易智造云工厂竞标系统用户条款易智造云工厂竞标系统用户条款易智造云工厂竞标系统用户条款易智造云工厂竞标系统用户条款易智造云工厂竞标系统用户条款易智造云工厂竞标系统用户条款易智造云工厂竞标系统用户条款易智造云工厂竞标系统用户条款易智造云工厂竞标系统用户条款易智造云工厂竞标系统用户条款易智造云工厂竞标系统用户条款易智造云工厂竞标系统用户条款易智造云工厂竞标系统用户条款易智造云工厂竞标系统用户条款易智造云工厂竞标系统用户条款易智造云工厂竞标系统用户条款易智造云工厂竞标系统用户条款易智造云工厂竞标系统用户条款易智造云工厂竞标系统用户条款易智造云工厂竞标系统用户条款易智造云工厂竞标系统用户条款易智造云工厂竞标系统用户条款易智造云工厂竞标系统用户条款易智造云工厂竞标系统用户条款易智造云工厂竞标系统用户条款易智造云工厂竞标系统用户条款易智造云工厂竞标系统用户条款易智造云工厂竞标系统用户条款易智造云工厂竞标系统用户条款易智造云工厂竞标系统用户条款易智造云工厂竞标系统用户条款易智造云工厂竞标系统用户条款易智造云工厂竞标系统用户条款易智造云工厂竞标系统用户条款易智造云工厂竞标系统用户条款易智造云工厂竞标系统用户条款易智造云工厂竞标系统用户条款易智造云工厂竞标系统用户条款易智造云工厂竞标系统用户条款易智造云工厂竞标系统用户条款易智造云工厂竞标系统用户条款易智造云工厂竞标系统用户条款易智造云工厂竞标系统用户条款易智造云工厂竞标系统用户条款易智造云工厂竞标系统用户条款易智造云工厂竞标系统用户条款易智造云工厂竞标系统用户条款易智造云工厂竞标系统用户条款易智造云工厂竞标系统用户条款易智造云工厂竞标系统用户条款易智造云工厂竞标系统用户条款易智造云工厂竞标系统用户条款易智造云工厂竞标系统用户条款易智造云工厂竞标系统用户条款易智造云工厂竞标系统用户条款易智造云工厂竞标系统用户条款易智造云工厂竞标系统用户条款
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                  <!--<button type="button" class="btn btn-primary">确定</button>-->
+                </div>
+              </div><!-- /.modal-content -->
+            </div><!-- /.modal -->
+          </div>
+        </div>
+      </div>
+      <!--<div *ngIf="!mobileNumber.valid && mobileNumber.touched " class="wrong-tip">请输入有效手机号码！</div>-->
+      <!--<div *ngIf="!passWord.valid && passWord.touched " class="wrong-tip">密码不少于6位！</div>-->
+      <div class="row" style="margin-top: 20px;">
+        <button type="submit" class="btn btn-block btn-primary" style="width:393px;height:42px;color:#fff;" [routerLink]="['./factoryinfo']">下一步</button>
+        <!--<router-outlet></router-outlet>-->
+      </div>
+    </form>
+
+
+  </div>
+</div>
