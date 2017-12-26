@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./catagory-detail.component.scss']
 })
 export class CatagoryDetailComponent implements OnInit {
+  flag: boolean = false;
 
   startTime = new Date(Date.parse('2017-12-21T00:00:00')).getTime();
   endTime = new Date(Date.parse('2017-12-22T10:56:00')).getTime();
@@ -15,8 +16,7 @@ export class CatagoryDetailComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    // console.log('?', this.startTime);
-    // console.log('www', this.endTime);
+
   }
 
 }

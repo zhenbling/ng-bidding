@@ -54,7 +54,69 @@
     </div>
   </div>
   <div class="submenu" [class.borderbom]="!showButton">
+    <!--<nav class="navbar navbar-default">-->
+      <!--<div class="container">-->
+        <!--<div class="nav navbar-nav dropdown">-->
+          <!--<button  type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">-->
+            <!--<span class="icon-bar"></span>-->
+            <!--<span class="icon-bar"></span>-->
+            <!--<span class="icon-bar"></span>-->
+          <!--</button>-->
+          <!--<a role="button" id="dropcatagory" data-toggle="dropdown" class="dropdown dropdown-toggle">-->
+            <!--<span><img src="http://placehold.it/18x18" alt="图标"></span>-->
+            <!--<span>全部商品分类</span>-->
+            <!--&lt;!&ndash;<span class="glyphicon glyphicon-menu-right pull-right"></span>&ndash;&gt;-->
+          <!--</a>-->
+          <!--<ul class="dropdown-menu" aria-labelledby="dropcatagory">-->
+            <!--<li>-->
+              <!--<span><img src="http://placehold.it/18x18" alt=""></span>-->
+              <!--<span>输配电</span>-->
+              <!--<span class="glyphicon glyphicon-menu-right pull-right"></span>-->
+              <!--<div class="gradient"></div>-->
+            <!--</li>-->
+            <!--<li>-->
+              <!--<span><img src="http://placehold.it/18x18" alt=""></span>-->
+              <!--<span>输配电</span>-->
+              <!--<span class="glyphicon glyphicon-menu-right pull-right"></span>-->
+              <!--<div class="gradient"></div>-->
+            <!--</li>-->
+            <!--<li>-->
+              <!--<span><img src="http://placehold.it/18x18" alt=""></span>-->
+              <!--<span>输配电</span>-->
+              <!--<span class="glyphicon glyphicon-menu-right pull-right"></span>-->
+              <!--<div class="gradient"></div>-->
+            <!--</li>-->
+            <!--<li>-->
+              <!--<span><img src="http://placehold.it/18x18" alt=""></span>-->
+              <!--<span>输配电</span>-->
+              <!--<span class="glyphicon glyphicon-menu-right pull-right"></span>-->
+              <!--<div class="gradient"></div>-->
+            <!--</li>-->
+            <!--<li>-->
+              <!--<span><img src="http://placehold.it/18x18" alt=""></span>-->
+              <!--<span>输配电</span>-->
+              <!--<span class="glyphicon glyphicon-menu-right pull-right"></span>-->
+              <!--<div class="gradient"></div>-->
+            <!--</li>-->
+          <!--</ul>-->
+        <!--</div>-->
+        <!--<div class="collapse navbar-collapse navbar-ex1-collapse">-->
+          <!--<ul class="nav navbar-nav">-->
+            <!--<li>-->
+              <!--<span>今日竞标</span>-->
+            <!--</li>-->
+            <!--<li>-->
+              <!--<span>今日询价</span>-->
+            <!--</li>-->
+            <!--<li>-->
+              <!--<span>历史竞标记录</span>-->
+            <!--</li>-->
+          <!--</ul>-->
+        <!--</div>-->
+      <!--</div>-->
 
+    <!--</nav>-->
+    <!--<div>-->
       <ul class="nav nav-tabs">
         <li class="dropdown open indexButton" *ngIf = "showButton">
           <button id="dropfirst" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true" disabled>
@@ -96,13 +158,13 @@
 
 
         </li>
-        <li role="presentation" class="otherpage">
+        <li role="presentation" [class.otherpage]="!showbutton" (click)="jumpTo()">
           <span>今日竞标</span>
         </li>
-        <li role="presentation" class="otherpage">
+        <li role="presentation" [class.otherpage]="!showbutton" (click)="jumpTo()">
           <span>今日询价</span>
         </li>
-        <li role="presentation" class="otherpage">
+        <li role="presentation" [class.otherpage]="!showbutton" (click)="jumpTo('recorder')">
           <span>历史竞标记录</span>
         </li>
       </ul>

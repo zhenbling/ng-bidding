@@ -1,4 +1,4 @@
-<section>
+<section [class.s-active]="seFlag" (mouseover) = "mouseOver()" (mouseout) = "mouseOut()">
   <img src="http://placehold.it/160x160" alt="">
   <p>我出价：<span>¥5675.00</span></p>
   <p>SCBH15-200kVA</p>
@@ -6,15 +6,17 @@
   <p>交货期：2017-1-21</p>
   <p>协议号：15648975726667</p>
   <div>
-    <button>国标</button>
-    <button>全铜</button>
-    <button>10/0.4KV</button>
-    <button>阻抗4%</button>
-    <button>温升100K</button>
+    <button disabled>国标</button>
+    <button disabled>全铜</button>
+    <button disabled>10/0.4KV</button>
+    <button disabled>阻抗4%</button>
+    <button disabled>温升100K</button>
   </div>
   <div>
     <app-stepper></app-stepper>
     <button>我要竞标</button>
   </div>
-  <div><button class="btn btn-default">一口价</button></div>
+  <div>
+    <button class="btn btn-default btn-block" [class.action]="flag">一口价</button>
+  </div>
 </section>

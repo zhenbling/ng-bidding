@@ -1,5 +1,5 @@
-import {Component, DoCheck, OnInit} from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
+import {Component, DoCheck, EventEmitter, OnInit, Output} from '@angular/core';
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +7,12 @@ import {ActivatedRoute} from '@angular/router';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit, DoCheck {
+  // @Output()
+  // scrollTo: EventEmitter<boolean> = new EventEmitter();
+
   indexUrl: string;
   showButton: boolean;
-  constructor(private activeRoute: ActivatedRoute) { }
+  constructor(private activeRoute: ActivatedRoute, private router: Router) { }
 
   ngOnInit() {
     // this.indexUrl = window.location.href;
@@ -30,6 +33,10 @@ export class HeaderComponent implements OnInit, DoCheck {
         this.showButton = false;
       }
     }
+  }
+  jumpTo (item) {
+    this.router.navigate(['/pages/index/' + item]);
+    jQuery('html, body').animate({scrollTop: 680});
   }
 
 }

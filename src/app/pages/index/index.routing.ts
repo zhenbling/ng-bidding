@@ -2,7 +2,7 @@ import { Routes, RouterModule } from '@angular/router';
 import {IndexComponent} from './index.component';
 
 import {CatagoryListComponent} from './components/catagory-list/catagory-list.component';
-import {DetailListComponent} from './components/detail-list/detail-list.component';
+import {RecorderComponent} from './components/recorder/recorder.component';
 
 
 const routes: Routes = [
@@ -11,7 +11,7 @@ const routes: Routes = [
     component: IndexComponent,
     children: [
       { path: '', component: CatagoryListComponent },
-      { path: 'detaillist', component: DetailListComponent },
+      { path: 'recorder', component: RecorderComponent },
     ]
   }
 ]
