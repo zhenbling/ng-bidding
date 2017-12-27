@@ -159,13 +159,13 @@
 
         </li>
         <li role="presentation" [class.otherpage]="!showbutton" (click)="jumpTo()">
-          <span>今日竞标</span>
+          <a [routerLink]="['/pages/index']" [routerLinkActive]="['active']">今日竞标</a>
         </li>
         <li role="presentation" [class.otherpage]="!showbutton" (click)="jumpTo()">
-          <span>今日询价</span>
+          <a [routerLink]="['/pages/index/consult']" [routerLinkActive]="['active']">今日询价</a>
         </li>
         <li role="presentation" [class.otherpage]="!showbutton" (click)="jumpTo('recorder')">
-          <span>历史竞标记录</span>
+          <a [routerLink]="['/pages/index/recorder']" [routerLinkActive]="['active']">历史竞标记录</a>
         </li>
       </ul>
     <!--</div>-->

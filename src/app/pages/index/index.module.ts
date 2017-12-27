@@ -6,6 +6,7 @@ import {CatagoryListComponent} from './components/catagory-list/catagory-list.co
 import {RecorderComponent} from './components/recorder/recorder.component';
 import {routing} from './index.routing';
 import {IndexComponent} from './index.component';
+import { GoodsItemComponent } from './components/catagory-list/goods-item/goods-item.component';
 
 
 
@@ -19,7 +20,8 @@ import {IndexComponent} from './index.component';
     IndexComponent,
     BannerComponent,
     CatagoryListComponent,
-    RecorderComponent
+    RecorderComponent,
+    GoodsItemComponent
   ],
   providers: []
 

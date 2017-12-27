@@ -37,7 +37,7 @@ $bordercolor: #949494;
     }
   }
   >.input {
-    //display: table-cell;
+    display: table-cell;
     border-collapse: separate;
     position: relative;
     height: 30px;
@@ -47,7 +47,7 @@ $bordercolor: #949494;
     border-top: 1px solid $bordercolor;
     border-bottom: 1px solid $bordercolor;
     span {
-      //display: table-cell;
+      display: table-cell;
       white-space: nowrap;
       vertical-align: middle;
       text-align: center;

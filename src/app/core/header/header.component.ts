@@ -34,8 +34,8 @@ export class HeaderComponent implements OnInit, DoCheck {
       }
     }
   }
-  jumpTo (item) {
-    this.router.navigate(['/pages/index/' + item]);
+  jumpTo () {
+    // this.router.navigate(['/pages/index/' + item]);
     jQuery('html, body').animate({scrollTop: 680});
   }
 

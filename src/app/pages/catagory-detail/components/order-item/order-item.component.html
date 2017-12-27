@@ -1,11 +1,17 @@
 <section [class.s-active]="seFlag" (mouseover) = "mouseOver()" (mouseout) = "mouseOut()">
-  <img src="http://placehold.it/160x160" alt="">
+  <div class="imgCo">
+    <img src="http://placehold.it/160x160" alt="标的图片">
+    <div class="mask">
+      <img src="http://placehold.it/78x78" alt="标的状态">
+    </div>
+  </div>
+
   <p>我出价：<span>¥5675.00</span></p>
   <p>SCBH15-200kVA</p>
   <p>订单量：2000件</p>
   <p>交货期：2017-1-21</p>
   <p>协议号：15648975726667</p>
-  <div>
+  <div class="btnCo">
     <button disabled>国标</button>
     <button disabled>全铜</button>
     <button disabled>10/0.4KV</button>

@@ -144,6 +144,7 @@ div.submenu {
       cursor: pointer;
       a {
         padding: 0;
+        //color: $fontcolorg;
       }
 
 
@@ -156,6 +157,7 @@ div.submenu {
     //按钮激活时
     .active {
       color: $color;
+      background-color: $backcolorlg;
     }
     .indexButton {
 
@@ -298,7 +300,8 @@ div.borderbom {
   }
 }
 .nav > li > a:hover, .nav > li > a:focus {
-  background-color: $color;
+  background-color: $backcolorlg;
+  color: $color;
 }
 .nav > li > a:hover, .nav > li > a:focus {
   border: 0!important;
@@ -306,4 +309,5 @@ div.borderbom {
 .nav > li > a {
   height: 50px;
   line-height: 50px!important;
+  color: $fontcolorg;
 }

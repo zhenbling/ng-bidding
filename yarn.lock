@@ -5532,6 +5532,10 @@ trim-right@^1.0.1:
   dependencies:
     glob "^6.0.4"
 
+ts-md5@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/ts-md5/-/ts-md5-1.2.2.tgz#d176bcb9daca485a0fd29e6092bd4f6d658cf727"
+
 ts-node@~3.2.0:
   version "3.2.2"
   resolved "https://registry.yarnpkg.com/ts-node/-/ts-node-3.2.2.tgz#bbd28e38af4aaa3e96076c466e1b220197c1a3ce"
