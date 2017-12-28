@@ -11,6 +11,7 @@ import {ReactiveFormsModule} from '@angular/forms';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent
@@ -19,7 +20,6 @@ import {ReactiveFormsModule} from '@angular/forms';
     // CommonModule,
     BrowserModule,
     PagesModule,
-
     routing,
     ReactiveFormsModule,
     CoreModule.forRoot(),

@@ -1,21 +1,15 @@
 /**
  * Created by jason on 2017/12/12.
  */
-import {
-  ApplicationInitStatus, ApplicationRef, ErrorHandler, NgModule, RendererFactory2,
-  Sanitizer
-} from '@angular/core';
+import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { routing } from './pages-routing.module';
 import { PagesComponent } from './pages.component';
 import { CoreModule } from '../core/core.module';
-import { LoginComponent } from './login/login.component';
-import { ReactiveFormsModule } from '@angular/forms';
 
-import { CatagoryDetailComponent } from './catagory-detail/catagory-detail.component';
-import { ClockComponent } from './catagory-detail/components/clock/clock.component';
-import { OrderItemComponent } from './catagory-detail/components/order-item/order-item.component';
-import { StepperComponent } from './catagory-detail/components/stepper/stepper.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { SharedModule } from '../shared/shared.module';
+import {CatagoryModule} from './catagory-detail/catagory.module';
 
 
 
@@ -24,15 +18,13 @@ import { StepperComponent } from './catagory-detail/components/stepper/stepper.c
   imports: [
     CommonModule,
     CoreModule,
+    SharedModule,
     routing,
-    ReactiveFormsModule],
+    ReactiveFormsModule,
+    CatagoryModule
+  ],
   declarations: [
-    PagesComponent,
-    // LoginComponent,
-    CatagoryDetailComponent,
-    ClockComponent,
-    OrderItemComponent,
-    StepperComponent
+    PagesComponent
   ],
   providers: [
   ]
