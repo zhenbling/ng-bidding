@@ -43,3 +43,9 @@ a {
 app-index {
   width: 100%!important;
 }
+.largeWindow .modal-dialog {
+  max-width: 1200px !important;
+}
+.final-price .modal-content{
+  width: 420px !important;height:310px !important;
+}

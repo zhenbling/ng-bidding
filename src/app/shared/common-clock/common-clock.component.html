@@ -1,0 +1,11 @@
+<section>
+  <img src="http://placehold.it/30x30" alt="">
+  <p class="will" [class.hidden] = "clockFlag">开始时间：13:00—14:00</p>
+  <p class="ing" [class.hidden] = "!clockFlag">
+    剩余：
+    <button disabled>{{hourFst}}</button><button disabled>{{hourSec}}</button>时
+    <button disabled>{{minFst}}</button><button disabled>{{minSec}}</button>分
+    <button disabled>{{scdFst}}</button><button disabled>{{scdSec}}</button>秒
+  </p>
+</section>
+

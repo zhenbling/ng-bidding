@@ -1,0 +1,44 @@
+$fontcolory: #FF9900;
+accordion{
+  width: 249px; height: 822px;background-color: white;padding-left: 60px;
+}
+
+
+.customClass{
+  background-color: palegreen;
+}
+accordion-group {
+  margin-bottom: 20px;
+  background-color: #fff;
+  border: 0px solid transparent;
+  border-radius: 4px;
+   box-shadow: 0 0px 0px rgba(0, 0, 0, .05) !important;
+}
+accordion-group div{
+  box-shadow: 0 0px 0px rgba(0, 0, 0, .05) !important;
+}
+.panel-group .panel {
+  margin-bottom: 0;
+  box-shadow: none;
+}
+.panel-primary > .panel-heading {
+  color: #fff;
+  background-color: #b74e6f !important;
+  border-color: #46b73d !important;
+}
+span{
+  display: block;
+  width: 20px;
+  border: 1px solid gray;
+  text-align: center;
+  height: 20px;
+  line-height: 16px;
+  float: left;
+}
+accordion-group span:last-child{display: none}
+label{
+  display: block;float: left;margin-left: 10px;font-weight: normal;
+}
+p{margin-left: 30px;}
+p:hover{cursor: pointer;color: $fontcolory;}
+.active{color: $fontcolory}

@@ -1,0 +1,75 @@
+<!--<p>-->
+  <!--upload-img works!-->
+<!--</p>-->
+<div class="col-md-1" style="padding-left:0;padding-right:0;margin-right: 40px;">
+  <img src="http://placehold.it/70x70" data-toggle="modal" data-target="#myModal0">
+  <div class="modal fade" id="myModal0" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header" style="border-bottom: none;">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="color:#fff;border:1px solid #f2f2f2;border-radius: 50%;">&times;</button>
+          <!--<h4 class="modal-title" id="myModalLabel">《易智造云工厂竞标系统用户条款》</h4>-->
+        </div>
+        <div class="modal-body">
+
+          <div id="myCarouse0" class="carousel slide">
+            <ol class="carousel-indicators" style="bottom:-95px;">
+              <li class="active" data-target="#myCarouse0" data-slide-to="0"></li>
+              <li data-target="#myCarouse0" data-slide-to="1"></li>
+              <li data-target="#myCarouse0" data-slide-to="2"></li>
+              <li data-target="#myCarouse0" data-slide-to="3"></li>
+              <li data-target="#myCarouse0" data-slide-to="4"></li>
+              <li data-target="#myCarouse0" data-slide-to="5"></li>
+              <li data-target="#myCarouse0" data-slide-to="6"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="item active">
+                <img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="First slide">
+                <i class="glyphicon glyphicon-trash" (click)="deleteImg(index, item)"></i>
+              </div>
+              <div class="item">
+                <img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Second slide">
+                <i class="glyphicon glyphicon-trash" (click)="deleteImg(index, item)"></i>
+              </div>
+              <div class="item">
+                <img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Third slide">
+                <i class="glyphicon glyphicon-trash" (click)="deleteImg(index, item)"></i>
+              </div>
+              <div class="item">
+                <img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Forth slide">
+                <i class="glyphicon glyphicon-trash" (click)="deleteImg(index, item)"></i>
+              </div>
+              <div class="item">
+                <img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Fifth slide">
+                <i class="glyphicon glyphicon-trash" (click)="deleteImg(index, item)"></i>
+              </div>
+              <div class="item">
+                <img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Sixth slide">
+                <i class="glyphicon glyphicon-trash" (click)="deleteImg(index, item)"></i>
+              </div>
+              <div class="item">
+                <img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Seventh slide">
+                <i class="glyphicon glyphicon-trash" (click)="deleteImg(index, item)"></i>
+              </div>
+            </div>
+            <a class="carousel-control left" style="top:300px;" href="#myCarouse0"
+               data-slide="prev">&lsaquo;
+            </a>
+            <a class="carousel-control right" style="top:300px;" href="#myCarouse0"
+               data-slide="next">&rsaquo;
+            </a>
+          </div>
+        </div>
+        <div class="modal-footer" style="border-top: none;">
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+  </div>
+  <p style="text-align: center;padding-top: 10px;">{{imgLabel}}</p>
+  <!--<input type="file" />-->
+  <div class="file-div">
+    <div class="newFile">上传图片</div>
+    <input type="file" class="selectFile"/>
+  </div>
+  <!--<a href="#nowhere" style="padding-left:5px;color:#FFB717;text-decoration: underline">上传图片</a>-->
+</div>

@@ -9,7 +9,7 @@ export class OrderItemComponent implements OnInit {
   @Input()
   flag
   public seFlag: boolean = false;
-
+  public myfinalPrice=233;
   constructor() { }
 
   ngOnInit() {
@@ -20,5 +20,7 @@ export class OrderItemComponent implements OnInit {
   mouseOut () {
     this.seFlag = false;
   }
-
+  gotoDetail() {
+    window.location.href = '/#/pages/detaillist';
+  }
 }

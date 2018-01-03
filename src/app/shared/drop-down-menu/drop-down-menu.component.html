@@ -1,0 +1,40 @@
+<!--<p>-->
+  <!--drop-down-menu works!-->
+<!--</p>-->
+<div class="dropdown">
+  <button type="button" class="btn dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" >{{label}}
+    <span class="glyphicon glyphicon-menu-down" style="padding-left:20px;"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+    <li *ngFor="let item of cities">
+      <a role="menuitem" tabindex="-1" href="#">{{item.name}}</a>
+    </li>
+    <!--<li role="presentation" class="dropdown-header">下拉菜单标题</li>-->
+    <!--<li role="presentation" class="option">-->
+      <!--<a role="menuitem" tabindex="-1" href="#">安徽</a>-->
+    <!--</li>-->
+    <!--<li role="presentation" class="option">-->
+      <!--<a role="menuitem" tabindex="-1" href="#">澳门</a>-->
+    <!--</li>-->
+    <!--<li role="presentation" class="option">-->
+      <!--<a role="menuitem" tabindex="-1" href="#">北京</a>-->
+    <!--</li>-->
+    <!--&lt;!&ndash;<li role="presentation" class="divider"></li>&ndash;&gt;-->
+    <!--&lt;!&ndash;<li role="presentation" class="dropdown-header">下拉菜单标题</li>&ndash;&gt;-->
+    <!--<li role="presentation" class="option">-->
+      <!--<a role="menuitem" tabindex="-1" href="#">重庆</a>-->
+    <!--</li>-->
+    <!--<li role="presentation" class="option">-->
+      <!--<a role="menuitem" tabindex="-1" href="#">福建</a>-->
+    <!--</li>-->
+    <!--<li role="presentation" class="option">-->
+      <!--<a role="menuitem" tabindex="-1" href="#">甘肃</a>-->
+    <!--</li>-->
+    <!--<li role="presentation" class="option">-->
+      <!--<a role="menuitem" tabindex="-1" href="#">广东</a>-->
+    <!--</li>-->
+    <!--<li role="presentation" class="option">-->
+      <!--<a role="menuitem" tabindex="-1" href="#">广西</a>-->
+    <!--</li>-->
+  </ul>
+</div>

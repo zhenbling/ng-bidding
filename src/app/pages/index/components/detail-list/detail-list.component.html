@@ -1,0 +1,98 @@
+<!--<p>-->
+  <!--detail-list works!-->
+<!--</p>-->
+<!--<p>-->
+<!--product-detail works!-->
+<!--</p>-->
+<nav>
+  <ol class="breadcrumb">
+    <li><a href="javascript:;" routerLink="['/pages/index']">今日竞价</a></li>
+    <li><a href="javascript:;">变压器</a></li>
+    <li><a href="javascript:;">SCBH15-200kVA</a></li>
+  </ol>
+</nav>
+<section style="background-color: #fff;width:1199px;height:457px;margin-left:4%;">
+  <div class="row" style="padding-top:20px;">
+    <div class="col-md-5">
+      <div id="myCarouse0" class="carousel slide">
+        <ol class="carousel-indicators" style="top:350px;">
+          <li class="active" data-target="#myCarouse0" data-slide-to="0"></li>
+          <li data-target="#myCarouse0" data-slide-to="1"></li>
+          <li data-target="#myCarouse0" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="item active">
+            <img src="http://placehold.it/340x340" alt="First slide">
+          </div>
+          <div class="item">
+            <img src="http://placehold.it/340x340" alt="Second slide">
+          </div>
+          <div class="item">
+            <img src="http://placehold.it/340x340" alt="Third slide">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-7">
+      <h3>SCBH15-200kVA干式非晶合金变压器</h3>
+      <div class="row" style="margin-left:0;">
+        <button class="btn btn-default btn-sm" disabled>国标</button>
+        <button class="btn btn-default btn-sm" disabled>全铜</button>
+        <button class="btn btn-default btn-sm" disabled>10/0.4KV</button>
+        <button class="btn btn-default btn-sm" disabled>阻抗4%</button>
+        <button class="btn btn-default btn-sm" disabled>温升100K</button>
+      </div>
+      <p style="margin-top:15px;color:#FFB717;">订单量<span style="margin-left:20px;">2000件</span></p>
+      <p style="color:#FFB717;">交货期<span style="margin-left:20px;">2017-1-21</span></p>
+      <p>协议号<span style="margin-left:20px;">15648975726667</span></p>
+      <div class="clock" style="max-width:607px;">
+        <app-clock [startTime]="startTime" [endTime]="endTime"></app-clock>
+      </div>
+      <p style="margin:20px 0;">注意：倒计时可能存在误差，请及时刷新。</p>
+      <div class="row" style="margin-bottom: 15px;">
+        <div class="col-md-4">
+          <app-stepper></app-stepper>
+        </div>
+        <div class="col-md-8">
+          <button class="btn btn-default" style="width:87px;height:32px;background-color: #A6A6A6;margin-top:0;color:#fff;">我要竞标</button>
+        </div>
+
+      </div>
+      <div style="width:273px;height:32px;">
+        <app-final-price></app-final-price>
+        <!--<button class="btn btn-default btn-block" [class.action]="flag">一口价</button>-->
+      </div>
+    </div>
+  </div>
+</section>
+<section style="margin-top:40px;margin-left:4%;background-color: #fff;width:1196px;height:170px;">
+  <p style="padding:15px;border-bottom:1px solid #cccccc;">竞标流程</p>
+  <img src="http://placehold.it/1184x99">
+</section>
+<section style="background-color: #fff;width:1196px;height:auto;margin-left:4%;margin-top:40px;">
+  <div id="myCarouse1" class="carousel slide">
+    <ol class="carousel-indicators tabs" style="top:12px;left:-112px;">
+      <li class="active" data-target="#myCarouse1" data-slide-to="0">标的介绍</li>
+      <li data-target="#myCarouse1" data-slide-to="1">技术参数</li>
+    </ol>
+    <!--<hr>-->
+    <div class="carousel-inner tabs" style="padding-top:60px;">
+      <div class="item active">
+        <img src="http://placehold.it/1196x6931" alt="First slide">
+      </div>
+      <div class="item">
+        <img src="http://placehold.it/1196x6931" alt="Second slide">
+      </div>
+    </div>
+  </div>
+  <!--<ul class="nav nav-tabs" style="padding-top:5px;">-->
+    <!--<li class="active" (click)="openTabs(evt, 'intro')"><a href="javascript:;" class="tablink">标的介绍</a></li>-->
+    <!--<li (click)="openTabs(evt, 'params')"><a href="javascript:;" class="tablink">技术参数</a></li>-->
+  <!--</ul>-->
+  <!--<div id="intro" class="tabcontent">-->
+    <!--<img src="http://placehold.it/1196x6931">-->
+  <!--</div>-->
+  <!--<div id="params" class="tabcontent hide">-->
+    <!--<img src="http://placehold.it/1196x6931">-->
+  <!--</div>-->
+</section>

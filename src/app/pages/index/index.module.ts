@@ -7,6 +7,9 @@ import {RecorderComponent} from './components/recorder/recorder.component';
 import {routing} from './index.routing';
 import {IndexComponent} from './index.component';
 import { GoodsItemComponent } from './components/catagory-list/goods-item/goods-item.component';
+import {CatagoryModule} from '../catagory-detail/catagory.module';
+import {DetailListComponent} from './components/detail-list/detail-list.component';
+import {SharedModule} from '../../shared/shared.module';
 
 
 
@@ -14,14 +17,17 @@ import { GoodsItemComponent } from './components/catagory-list/goods-item/goods-
   imports: [
     FormsModule,
     ReactiveFormsModule,
-    routing
+    routing,
+    CatagoryModule,
+    SharedModule
   ],
   declarations: [
     IndexComponent,
     BannerComponent,
     CatagoryListComponent,
     RecorderComponent,
-    GoodsItemComponent
+    GoodsItemComponent,
+    DetailListComponent
   ],
   providers: []
 

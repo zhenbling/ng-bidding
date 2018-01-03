@@ -4,54 +4,56 @@
 <div class="body" style="padding-top:70px;">
   <div class="loginPart" style="padding-left: 40px;padding-right:40px;padding-top:20px;">
     <h4>账号登录</h4>
-    <form class="form-horizontal" role="form" style="margin-top:30px;" [formGroup]="loginForm" (ngSubmit)="loginIn()">
+    <form class="form-horizontal" role="form" style="margin-top:30px;">
       <div class="form-group">
         <div class="row">
           <div class="col-md-2">
             <img src="http://placehold.it/44x42" />
           </div>
           <div class="col-md-10">
-            <input type="text" class="form-control" placeholder="请输入手机号" formControlName="mobileNumber">
+            <input type="text" class="form-control" placeholder="请输入手机号" name="MobileNumber" [(ngModel)]="MobileNumber">
           </div>
         </div>
       </div>
-      <div class="form-group" style="margin-bottom:20px;">
+      <div class="form-group" style="margin-bottom:40px;">
         <div class="row">
           <div class="col-md-2">
             <img src="http://placehold.it/44x42" />
           </div>
           <div class="col-md-10">
-            <input type="password" class="form-control" placeholder="请输入登录密码" formControlName="passWord">
+            <input type="password" class="form-control" placeholder="请输入登录密码" name="Password"  [(ngModel)]="Password">
           </div>
         </div>
+        <p style="padding:15px;color:red;">{{ErrorMsg}}</p>
       </div>
-      <div class="form-group" style="border:none;margin-bottom: 10px;">
-        <button type="submit" class="btn btn-block btn-primary" style="width:296px;height:42px;border:none;font-size: 18px;">登录</button>
+      <div class="form-group" style="border:none;margin-bottom: 20px;">
+        <button type="submit" class="btn btn-block btn-primary" style="width:296px;height:42px;border:none;font-size: 18px;" (click)="login()">登录</button>
       </div>
       <div class="row">
         <a href="#nowhere" style="color:#ccc;float:left;" [routerLink]="['./findpwd']">忘记密码?</a>
         <a href="#nowhere" [routerLink]="['/register']" class="yellow" style="color:#FFB717;float:right;">免费注册</a>
       </div>
-      <div class="row">
-        <div class="col-md-4" style="padding-left: 0;">
-          <div class="line"></div>
-        </div>
-        <div class="col-md-4" style="padding-right: 0;color:#A1A1A1;padding-left:10px;">其他方式登录</div>
-          <div class="col-md-4" style="padding-right: 0;">
-        <div class="line"></div>
-      </div>
-    </div>
-      <div class="row" style="margin-top:20px;">
-        <div class="col-md-3"></div>
-        <div class="col-md-4">
-          <img src="http://placehold.it/18x17" />
-          <p>微信</p>
-        </div>
-        <div class="col-md-5" style="padding-left:20px;">
-          <img src="http://placehold.it/18x17" />
-          <p>QQ</p>
-        </div>
-      </div>
+      <!--<div class="row">-->
+        <!--<div class="col-md-4" style="padding-left: 0;">-->
+          <!--<div class="line"></div>-->
+        <!--</div>-->
+        <!--<div class="col-md-4" style="padding-right: 0;color:#A1A1A1;padding-left:10px;">其他方式登录</div>-->
+          <!--<div class="col-md-4" style="padding-right: 0;">-->
+        <!--<div class="line"></div>-->
+      <!--</div>-->
+    <!--</div>-->
+      <!--<div class="row" style="margin-top:20px;">-->
+        <!--<div class="col-md-3"></div>-->
+        <!--<div class="col-md-4">-->
+          <!--<img src="http://placehold.it/18x17" />-->
+          <!--<p>微信</p>-->
+        <!--</div>-->
+        <!--<div class="col-md-5" style="padding-left:20px;">-->
+          <!--<img src="http://placehold.it/18x17" />-->
+          <!--<p>QQ</p>-->
+        <!--</div>-->
+      <!--</div>-->
     </form>
+    <!--<p> form value: {{ loginForm.value | json}}</p>-->
   </div>
 </div>

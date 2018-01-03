@@ -10,6 +10,10 @@ import { CoreModule } from '../core/core.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from '../shared/shared.module';
 import {CatagoryModule} from './catagory-detail/catagory.module';
+// import { ProductDetailComponent } from './product-detail/product-detail.component';
+import {DetailListComponent} from './index/components/detail-list/detail-list.component';
+import {IndexModule} from './index/index.module';
+// import {ClockComponent} from './catagory-detail/components/clock/clock.component';
 
 
 
@@ -21,7 +25,8 @@ import {CatagoryModule} from './catagory-detail/catagory.module';
     SharedModule,
     routing,
     ReactiveFormsModule,
-    CatagoryModule
+    CatagoryModule,
+    IndexModule
   ],
   declarations: [
     PagesComponent

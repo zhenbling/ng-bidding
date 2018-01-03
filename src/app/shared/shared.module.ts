@@ -3,10 +3,18 @@ import {FinalPriceComponent} from './final-price/final-price.component';
 import {CommonModule} from '@angular/common';
 import { PaginationComponent } from './pagination/pagination.component';
 import {
-  BsModalService, ComponentLoaderFactory, ModalModule, PaginationConfig, PaginationModule,
-  PositioningService
+  BsModalService, ComponentLoaderFactory, ModalModule, PaginationConfig, PaginationModule, PositioningService
+
 } from 'ngx-bootstrap';
 import {FormsModule} from '@angular/forms';
+import {InputComponent} from './input/input.component';
+import {PhoneCheckCodeComponent} from './phone-check-code/phone-check-code.component';
+import {UploadImgComponent} from './upload-img/upload-img.component';
+import {DropDownMenuComponent} from './drop-down-menu/drop-down-menu.component';
+import { CommonClockComponent } from './common-clock/common-clock.component';
+import {StepperComponent} from './stepper/stepper.component';
+import {StepComponent} from './step/step.component';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -16,7 +24,14 @@ import {FormsModule} from '@angular/forms';
   ],
   declarations: [
     FinalPriceComponent,
-    PaginationComponent
+    PaginationComponent,
+    InputComponent,
+    PhoneCheckCodeComponent,
+    UploadImgComponent,
+    StepperComponent,
+    DropDownMenuComponent,
+    CommonClockComponent,
+    StepComponent
   ],
   providers: [
     PaginationConfig,
@@ -26,7 +41,14 @@ import {FormsModule} from '@angular/forms';
   ],
   exports: [
     FinalPriceComponent,
-    PaginationComponent
+    PaginationComponent,
+    InputComponent,
+    PhoneCheckCodeComponent,
+    UploadImgComponent,
+    StepperComponent,
+    DropDownMenuComponent,
+    CommonClockComponent,
+    StepComponent
   ],
   entryComponents: [
     FinalPriceComponent

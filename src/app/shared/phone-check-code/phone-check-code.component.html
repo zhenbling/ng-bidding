@@ -1,0 +1,15 @@
+<!--<p>-->
+  <!--phone-check-code works!-->
+<!--</p>-->
+<div class="form-group">
+  <label for="checkcode" class="col-md-3" style="color:#000;">手机验证码</label>
+  <div class="col-md-5">
+    <div class="input-group">
+      <input type="text" class="form-control" id="checkcode" placeholder="请输入手机验证码" [(ngModel)]="ngModel" [name]="name" required="required">
+    </div>
+  </div>
+  <div class="col-md-4" style="padding-left:0;">
+    <button class="btn btn-link" type="button" (click)="getVerificationCode()" style="border:none;background: #f2f2f2;width:113%;height:43px;color:#6D6D6D;font-size:16px;text-decoration: none;" >{{codeMsg}}</button>
+  </div>
+</div>
+<p *ngIf="ErrorMsg" style="color:red;">{{ErrorMsg}}</p>

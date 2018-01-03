@@ -2,8 +2,8 @@ import { Routes, RouterModule } from '@angular/router';
 import {RegisterComponent} from './register.component';
 import {BaseInfoComponent} from './components/base-info/base-info.component';
 import {FactoryInfoComponent} from './components/factory-info/factory-info.component';
-// import {WaitAuditComponent} from './components/wait-audit/wait-audit.component';
-// import {AuditResultComponent} from './components/audit-result/audit-result.component';
+import {WaitAuditComponent} from './components/wait-audit/wait-audit.component';
+import {AuditResultComponent} from './components/audit-result/audit-result.component';
 
 const routes: Routes = [
   {
@@ -12,8 +12,8 @@ const routes: Routes = [
     children: [
     { path: '', component: BaseInfoComponent },
     { path: 'factoryinfo', component: FactoryInfoComponent },
-    // { path: 'waitaudit', component: WaitAuditComponent },
-    //   { path: 'auditresult', component: AuditResultComponent }
+    { path: 'waitaudit', component: WaitAuditComponent },
+      { path: 'auditresult', component: AuditResultComponent }
   ]
   }
 ]

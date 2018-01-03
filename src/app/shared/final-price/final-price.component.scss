@@ -1,0 +1,27 @@
+$fontcolory: #FF9900;
+$color: #4cdbec;
+.btn-block{
+  color: $fontcolory;
+}
+p span{
+  color: $fontcolory;
+}
+.modal-body{padding: 20px 40px;}
+.modal-body p:first-child{margin-bottom: 20px;}
+input{margin-left: 15px;width: 150px;height:30px;line-height: 30px;text-align: center}
+.btn-primary{
+  background-color: $color;
+  color: #fff;
+  width: 100px;
+  height: 38px;
+  margin: 30px auto;
+  display: block;
+  border-width:0 ;
+}
+.modal-header{
+  color: #fff;
+  background-color: $color;
+  border-top-left-radius:6px ;
+  border-top-right-radius:6px ;
+
+}

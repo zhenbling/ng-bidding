@@ -5,595 +5,706 @@
   <div class="step">
     <div class="row" style="margin-right: 0;">
       <div class="col-md-2"></div>
-      <div class="col-md-2" style="padding-top:30px;">
-        <div class="row">
-          <div class="col-md-2">
-            <div class="round blue"><span>1</span></div>
-          </div>
-          <div class="col-md-10">
-            <div class="line on"></div>
-          </div>
-        </div>
-        <div class="row">
-          <span>填写基本信息</span>
-        </div>
-      </div>
-      <div class="col-md-2" style="padding-top:30px;">
-        <div class="row">
-          <div class="col-md-2">
-            <div class="round blue"><span>2</span></div>
-          </div>
-          <div class="col-md-10">
-            <div class="line on"></div>
-          </div>
-        </div>
-        <div class="row">
-          <span>完善资质认证</span>
-        </div>
-      </div>
-      <div class="col-md-2" style="padding-top:30px;">
-        <div class="row">
-          <div class="col-md-2">
-            <div class="round"><span>3</span></div>
-          </div>
-          <div class="col-md-10">
-            <div class="line"></div>
-          </div>
-        </div>
-        <div class="row">
-          <span>等待客服审核</span>
-        </div>
-      </div>
-      <div class="col-md-2" style="padding-top:30px;">
-        <div class="row">
-          <div class="col-md-2">
-            <div class="round">
-              <div class="round"><span>4</span></div>
-            </div>
-          </div>
-          <div class="col-md-10">
-            <div class="line"></div>
-          </div>
-        </div>
-        <div class="row">
-          <span>审核完成</span>
-        </div>
-      </div>
+      <app-step step="1" roundClass="round blue" lineClass="line on" label="填写基本信息"></app-step>
+      <app-step step="2" roundClass="round blue" lineClass="line on" label="完善验厂认证"></app-step>
+      <app-step step="3" roundClass="round" lineClass="line" label="等待客服审核"></app-step>
+      <app-step step="4" roundClass="round" lineClass="line" label="审核完成"></app-step>
+      <!--<div class="col-md-2" style="padding-top:30px;">-->
+        <!--<div class="row">-->
+          <!--<div class="col-md-2">-->
+            <!--<div class="round blue"><span>1</span></div>-->
+          <!--</div>-->
+          <!--<div class="col-md-10">-->
+            <!--<div class="line on"></div>-->
+          <!--</div>-->
+        <!--</div>-->
+        <!--<div class="row">-->
+          <!--<span>填写基本信息</span>-->
+        <!--</div>-->
+      <!--</div>-->
+      <!--<div class="col-md-2" style="padding-top:30px;">-->
+        <!--<div class="row">-->
+          <!--<div class="col-md-2">-->
+            <!--<div class="round blue"><span>2</span></div>-->
+          <!--</div>-->
+          <!--<div class="col-md-10">-->
+            <!--<div class="line on"></div>-->
+          <!--</div>-->
+        <!--</div>-->
+        <!--<div class="row">-->
+          <!--<span>完善验厂认证</span>-->
+        <!--</div>-->
+      <!--</div>-->
+      <!--<div class="col-md-2" style="padding-top:30px;">-->
+        <!--<div class="row">-->
+          <!--<div class="col-md-2">-->
+            <!--<div class="round"><span>3</span></div>-->
+          <!--</div>-->
+          <!--<div class="col-md-10">-->
+            <!--<div class="line"></div>-->
+          <!--</div>-->
+        <!--</div>-->
+        <!--<div class="row">-->
+          <!--<span>等待客服审核</span>-->
+        <!--</div>-->
+      <!--</div>-->
+      <!--<div class="col-md-2" style="padding-top:30px;">-->
+        <!--<div class="row">-->
+          <!--<div class="col-md-2">-->
+            <!--<div class="round">-->
+              <!--<div class="round"><span>4</span></div>-->
+            <!--</div>-->
+          <!--</div>-->
+          <!--<div class="col-md-10">-->
+            <!--<div class="line"></div>-->
+          <!--</div>-->
+        <!--</div>-->
+        <!--<div class="row">-->
+          <!--<span>审核完成</span>-->
+        <!--</div>-->
+      <!--</div>-->
       <div class="col-md-2"></div>
     </div>
   </div>
   <div class="regPart" style="margin-left: 38%;margin-top:20px;">
 
     <span style="padding-left: 266px;color:#AEAEAE">已有账号？<a href="#nowhere" class="yellow" style="color:#FFB717;">请登录</a></span>
-    <form class="form-horizontal" role="form" style="margin-top:30px;width:380px;" [formGroup]="factoryForm" (ngSubmit)="onSubmit()">
-      <div class="form-group">
-        <span class="col-md-3" style="padding-top: 10px;color:#000;">公司名称</span>
-        <div class="col-md-9">
-          <input type="text" class="form-control" value="易虎网科技南京有限公司" formControlName="companyName" required>
-        </div>
+    <form class="form-horizontal" role="form" style="margin-top:30px;width:380px;">
+      <app-input type="text" value="易虎网科技南京有限公司" labelText="公司名称" name="CompanyName" [(ngModel)]="CompanyName" ngDefaultControl></app-input>
+      <app-input type="text" value="赵三" labelText="联系人" name="ContactName" [(ngModel)]="ContactName" ngDefaultControl></app-input>
+      <!--<app-input type="text" placeholder="请输入工厂所在地详细地址" labelText="工厂所在地"></app-input>-->
+      <app-input type="text" placeholder="请输入公司主营类别" labelText="经营类别"></app-input>
+      <!--<div class="row">-->
+        <!--<div class="col-md-3" style="width:122px;height:42px;border:1px solid #CCC;margin-right:20px;padding-left:0;padding-top:2px;">-->
+          <!--<app-drop-down-menu label="请输入省"></app-drop-down-menu>-->
+        <!--</div>-->
+        <!--<div class="col-md-3" style="width:122px;height:42px;border:1px solid #CCC;margin-right:20px;padding-left:0;padding-top:2px;">-->
+          <!--<app-drop-down-menu label="请输入市"></app-drop-down-menu>-->
+        <!--</div>-->
+        <!--<div class="col-md-3" style="width:122px;height:42px;border:1px solid #CCC;padding-left:0;padding-top:2px;">-->
+          <!--<app-drop-down-menu label="请输入地区"></app-drop-down-menu>-->
+        <!--</div>-->
+      <!--</div>-->
+      <div class="form-group" style="margin-top:30px;padding-left:10px;">
+        <input type="text" placeholder="请输入工厂详细地址" style="width:380px;">
       </div>
-      <div class="form-group">
-        <span class="col-md-3" style="padding-top: 10px;color:#000;">联系人</span>
-        <div class="col-md-9">
-          <!--<div class="input-group">-->
-          <input type="text" class="form-control" value="赵三" formControlName="contactName" required>
+      <!--<div class="form-group">-->
+        <!--<span class="col-md-3" style="padding-top: 10px;color:#000;">公司名称</span>-->
+        <!--<div class="col-md-9">-->
+          <!--<input type="text" class="form-control" value="易虎网科技南京有限公司" formControlName="companyName" >-->
+        <!--</div>-->
+      <!--</div>-->
+      <!--<div class="form-group">-->
+        <!--<span class="col-md-3" style="padding-top: 10px;color:#000;">联系人</span>-->
+        <!--<div class="col-md-9">-->
+          <!--&lt;!&ndash;<div class="input-group">&ndash;&gt;-->
+          <!--<input type="text" class="form-control" value="赵三" formControlName="contactName" >-->
+          <!--&lt;!&ndash;</div>&ndash;&gt;-->
+        <!--</div>-->
+      <!--</div>-->
+      <!--<div class="form-group">-->
+        <!--<span class="col-md-3" style="padding-top: 10px;color:#000;">工厂所在地</span>-->
+        <!--<div class="col-md-9">-->
+          <!--<input type="text" class="form-control" placeholder="请输入工厂所在地详细地址" formControlName="address" >-->
+        <!--</div>-->
+      <!--</div>-->
+      <!--<div class="form-group" style="margin-bottom: 80px;">-->
+        <!--<span class="col-md-3" style="padding-top: 10px;color:#000;">经营类别</span>-->
+        <!--<div class="col-md-7">-->
+          <!--<input type="text" class="form-control" id="businessCategory" placeholder="请选择公司主营类别" >-->
+        <!--</div>-->
+        <!--<div class="col-md-2">-->
+          <!--<img src="http://placehold.it/18x40" style="margin-left:18px;margin-top:1px;" data-toggle="modal" data-target="#Modal"/>-->
+          <!--<div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">-->
+            <!--<div class="modal-dialog">-->
+              <!--<div class="modal-content" style="width:854px;height:522px;background: #fff;">-->
+                <!--<div class="modal-header" style="background: #f2f2f2;padding-bottom:15px;padding-top:20px;padding-left:50px;">-->
+                  <!--<button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="color:#000;border:1px solid #000;border-radius: 50%;padding:2px;">&times;</button>-->
+                  <!--<h5 class="modal-title" id="ModalLabel">选择经营类别</h5>-->
+                <!--</div>-->
+                <!--<div class="modal-body" style="margin-top: 0;padding:0;height:auto;">-->
+                  <!--<div class="row" style="border-bottom: 1px solid #000;width:100%;height:58px;margin:0;"></div>-->
+                  <!--<div class="row" style="border-bottom: 1px solid #000;height:336px;margin:0;">-->
+                    <!--<div class="col-md-3" style="background-color: #f2f2f2;padding:0;">-->
+                      <!--<button class="accordion">输配电类</button>-->
+                      <!--<div class="panel">-->
+                        <!--<button class="accordion">变压器</button>-->
+                        <!--<div class="panel">-->
+                          <!--<button class="accordion none">SCBH15</button>-->
+                          <!--<button class="accordion none">SBH15</button>-->
+                          <!--<button class="accordion none">SCB10</button>-->
+                          <!--<button class="accordion none">SCB11</button>-->
+                          <!--<button class="accordion none">S11</button>-->
+                        <!--</div>-->
+                        <!--<button class="accordion">低压断路器</button>-->
+                        <!--<div class="panel">-->
+                          <!--<button class="accordion none">SCBH15</button>-->
+                          <!--<button class="accordion none">SBH15</button>-->
+                          <!--<button class="accordion none">SCB10</button>-->
+                          <!--<button class="accordion none">SCB11</button>-->
+                          <!--<button class="accordion none">S11</button>-->
+                        <!--</div>-->
+                        <!--<button class="accordion">隔离开关</button>-->
+                        <!--<button class="accordion">变涌保护器</button>-->
+                        <!--<button class="accordion">刀开关</button>-->
+                      <!--</div>-->
+
+                      <!--<button class="accordion">电机</button>-->
+                      <!--<div class="panel">-->
+                        <!--<button>1</button>-->
+                        <!--<button>1</button>-->
+                        <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>-->
+                      <!--</div>-->
+                      <!--<button class="accordion">灯具</button>-->
+                      <!--<div class="panel">-->
+                        <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>-->
+                      <!--</div>-->
+                      <!--<button class="accordion">家具</button>-->
+                      <!--<div class="panel">-->
+                        <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>-->
+                      <!--</div>-->
+                      <!--<button class="accordion">休闲食品</button>-->
+                      <!--<div class="panel">-->
+                        <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>-->
+                      <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="col-md-9">2</div>-->
+                  <!--</div>-->
+                <!--</div>-->
+                <!--<div class="modal-footer" style="border-top: none;height:70px;margin-left:40%;">-->
+                  <!--<button type="submit" class="btn btn-primary btn-lg" data-dismiss="modal" style="width:95px;height:41px;">确定</button>-->
+                  <!--<button type="submit" class="btn btn-default btn-lg" data-dismiss="modal" style="border:1px solid #000;margin-left:25px;width:95px;height:41px;">取消</button>-->
+
+
+                <!--</div>-->
+              <!--</div>&lt;!&ndash; /.modal-content &ndash;&gt;-->
+            <!--</div>&lt;!&ndash; /.modal &ndash;&gt;-->
           <!--</div>-->
-        </div>
-      </div>
-      <div class="form-group">
-        <span class="col-md-3" style="padding-top: 10px;color:#000;">工厂所在地</span>
-        <div class="col-md-9">
-          <input type="password" class="form-control" placeholder="请输入工厂所在地详细地址" formControlName="address" required>
-        </div>
-      </div>
-      <div class="form-group" style="margin-bottom: 80px;">
-        <span class="col-md-3" style="padding-top: 10px;color:#000;">经营类别</span>
-        <div class="col-md-7">
-          <input type="text" class="form-control" id="businessCategory" placeholder="请选择公司主营类别" formControlName="category" required>
-        </div>
-        <div class="col-md-2">
-          <img src="http://placehold.it/18x40" style="margin-left:18px;margin-top:1px;" data-toggle="modal" data-target="#Modal"/>
-          <div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content" style="width:853px;height:522px;background: #fff;">
-                <div class="modal-header" style="background: #f2f2f2;padding-bottom:15px;padding-top:20px;padding-left:50px;">
-                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="color:#000;border:1px solid #000;border-radius: 50%;padding:2px;">&times;</button>
-                  <h5 class="modal-title" id="ModalLabel">选择经营类别</h5>
-                </div>
-                <div class="modal-body" style="margin-top: 0;padding:0;height:auto;">
-                  <div class="row" style="border-bottom: 1px solid #000;width:100%;height:58px;margin:0;"></div>
-                  <div class="row" style="border-bottom: 1px solid #000;height:336px;margin:0;">
-                    <div class="col-md-3" style="background-color: #f2f2f2;padding:0;padding-bottom:15px;">
-                      <ul>
-                        <li class="on" style="padding-left:45px;height:50px;padding-top:20px;color:#33cccc;">输配电类</li>
-                        <li style="padding-left:45px;height:50px;padding-top:20px;">电机</li>
-                        <li style="padding-left:45px;height:50px;padding-top:20px;">灯具</li>
-                        <li style="padding-left:45px;height:50px;padding-top:20px;">家具</li>
-                        <li style="padding-left:45px;height:50px;padding-top:20px;margin-bottom:70px;">休闲食品</li>
-                      </ul>
-                    </div>
-                    <div class="col-md-9">2</div>
-                  </div>
-                </div>
-                <div class="modal-footer" style="border-top: none;height:70px;margin-left:40%;">
-                  <button type="submit" class="btn btn-primary btn-lg" data-dismiss="modal" style="width:95px;height:41px;">确定</button>
-                  <button type="submit" class="btn btn-default btn-lg" data-dismiss="modal" style="border:1px solid #000;margin-left:25px;width:95px;height:41px;">取消</button>
-
-
-                </div>
-              </div><!-- /.modal-content -->
-            </div><!-- /.modal -->
-          </div>
-        </div>
-      </div>
-      <div class="row" style="border: 1px solid #ccc;height:42px;width:410px;">
-        <span style="padding:0 10px;">型号</span>
-        <input type="text" value="SBH15" style="border: 1px solid #AEAEAE;padding-left:10px;margin-top:6px;margin-left:5px;margin-right:40px;height:30px;width:67px;">
-        <span>产能</span>
-        <input type="text" class="production" value="100" style="border: 1px solid #AEAEAE;padding-left:10px;margin-top:6px;margin-left:5px;height:30px;width:67px;" formControlName="production">
-        <span>台/8小时</span>
-        <img src="http://placehold.it/18x40" style="margin-left:40px;margin-top:-2px;" (click)="add()"/>
-      </div>
-      <div class="row" style="border: 1px solid #ccc;height:42px;width:410px;border-top: none;">
-        <span style="padding:0 10px;">型号</span>
-        <input type="text" value="SBH15" style="border: 1px solid #AEAEAE;padding-left:10px;margin-top:6px;margin-left:5px;margin-right:40px;height:30px;width:67px;">
-        <span>产能</span>
-        <input type="text" class="production" value="100" style="border: 1px solid #AEAEAE;padding-left:10px;margin-top:6px;margin-left:5px;height:30px;width:67px;">
-        <span>台/8小时</span>
-        <img src="http://placehold.it/18x40" style="margin-left:40px;"/>
-      </div>
+        <!--</div>-->
+      <!--</div>-->
+      <!--<div class="row" style="border: 1px solid #ccc;height:42px;width:410px;">-->
+        <!--<span style="padding:0 10px;">型号</span>-->
+        <!--<input type="text" value="SBH15" style="border: 1px solid #AEAEAE;padding-left:10px;margin-top:6px;margin-left:5px;margin-right:40px;height:30px;width:67px;">-->
+        <!--<span>产能</span>-->
+        <!--<input type="text" id="production" value="100" style="border: 1px solid #AEAEAE;padding-left:10px;margin-top:6px;margin-left:5px;height:30px;width:67px;">-->
+        <!--<span>台/8小时</span>-->
+        <!--<img class="add" src="http://placehold.it/18x40" style="margin-left:40px;margin-top:-2px;" (click)="add()"/>-->
+      <!--</div>-->
+      <!--<div class="row" style="border: 1px solid #ccc;height:42px;width:410px;border-top: none;">-->
+        <!--<span style="padding:0 10px;">型号</span>-->
+        <!--<input type="text" value="SBH15" style="border: 1px solid #AEAEAE;padding-left:10px;margin-top:6px;margin-left:5px;margin-right:40px;height:30px;width:67px;">-->
+        <!--<span>产能</span>-->
+        <!--<input type="text" class="production" value="100" style="border: 1px solid #AEAEAE;padding-left:10px;margin-top:6px;margin-left:5px;height:30px;width:67px;">-->
+        <!--<span>台/8小时</span>-->
+        <!--<img src="http://placehold.it/18x40" style="margin-left:40px;"/>-->
+      <!--</div>-->
       <div class="row" style="margin-top:30px;width:800px;">
-        <div class="col-md-1" style="padding-left:0;padding-right:0;margin-right: 40px;">
-          <img src="http://placehold.it/70x70" data-toggle="modal" data-target="#myModal0">
-          <div class="modal fade" id="myModal0" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header" style="border-bottom: none;">
-                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="color:#fff;border:1px solid #f2f2f2;border-radius: 50%;">&times;</button>
-                  <!--<h4 class="modal-title" id="myModalLabel">《易智造云工厂竞标系统用户条款》</h4>-->
-                </div>
-                <div class="modal-body">
+        <app-upload-img imgLabel="营业执照"></app-upload-img>
+        <app-upload-img imgLabel="体系认证"></app-upload-img>
+        <app-upload-img imgLabel="产品资质"></app-upload-img>
+        <app-upload-img imgLabel="工厂照片"></app-upload-img>
+        <app-upload-img imgLabel="设备照片"></app-upload-img>
+        <app-upload-img imgLabel="生产车间"></app-upload-img>
+        <app-upload-img imgLabel="其他"></app-upload-img>
+        <!--<div class="col-md-1" style="padding-left:0;padding-right:0;margin-right: 40px;">-->
+          <!--<img src="http://placehold.it/70x70" data-toggle="modal" data-target="#myModal0">-->
+          <!--<div class="modal fade" id="myModal0" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">-->
+            <!--<div class="modal-dialog">-->
+              <!--<div class="modal-content">-->
+                <!--<div class="modal-header" style="border-bottom: none;">-->
+                  <!--<button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="color:#fff;border:1px solid #f2f2f2;border-radius: 50%;">&times;</button>-->
+                  <!--&lt;!&ndash;<h4 class="modal-title" id="myModalLabel">《易智造云工厂竞标系统用户条款》</h4>&ndash;&gt;-->
+                <!--</div>-->
+                <!--<div class="modal-body">-->
 
-                  <div id="myCarouse0" class="carousel slide">
-                    <ol class="carousel-indicators" style="bottom:-95px;">
-                      <li class="active" data-target="#myCarouse0" data-slide-to="0"></li>
-                      <li data-target="#myCarouse0" data-slide-to="1"></li>
-                      <li data-target="#myCarouse0" data-slide-to="2"></li>
-                      <li data-target="#myCarouse0" data-slide-to="3"></li>
-                      <li data-target="#myCarouse0" data-slide-to="4"></li>
-                      <li data-target="#myCarouse0" data-slide-to="5"></li>
-                      <li data-target="#myCarouse0" data-slide-to="6"></li>
-                    </ol>
-                    <div class="carousel-inner">
-                      <div class="item active">
-                        <img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="First slide">
-                      </div>
-                      <div class="item">
-                        <img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Second slide">
-                      </div>
-                      <div class="item">
-                        <img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Third slide">
-                      </div>
-                      <div class="item">
-                        <img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Forth slide">
-                      </div>
-                      <div class="item">
-                        <img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Fifth slide">
-                      </div>
-                      <div class="item">
-                        <img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Sixth slide">
-                      </div>
-                      <div class="item">
-                        <img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Seventh slide">
-                      </div>
-                    </div>
-                    <a class="carousel-control left" style="top:300px;" href="#myCarouse0"
-                       data-slide="prev">&lsaquo;
-                    </a>
-                    <a class="carousel-control right" style="top:300px;" href="#myCarouse0"
-                       data-slide="next">&rsaquo;
-                    </a>
-                  </div>
-                </div>
-                <div class="modal-footer" style="border-top: none;">
+                  <!--<div id="myCarouse0" class="carousel slide">-->
+                    <!--<ol class="carousel-indicators" style="bottom:-95px;">-->
+                      <!--<li class="active" data-target="#myCarouse0" data-slide-to="0"></li>-->
+                      <!--<li data-target="#myCarouse0" data-slide-to="1"></li>-->
+                      <!--<li data-target="#myCarouse0" data-slide-to="2"></li>-->
+                      <!--<li data-target="#myCarouse0" data-slide-to="3"></li>-->
+                      <!--<li data-target="#myCarouse0" data-slide-to="4"></li>-->
+                      <!--<li data-target="#myCarouse0" data-slide-to="5"></li>-->
+                      <!--<li data-target="#myCarouse0" data-slide-to="6"></li>-->
+                    <!--</ol>-->
+                    <!--<div class="carousel-inner">-->
+                      <!--<div class="item active">-->
+                        <!--<img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="First slide">-->
+                        <!--<i class="glyphicon glyphicon-trash" (click)="deleteImg(index, item)"></i>-->
+                      <!--</div>-->
+                      <!--<div class="item">-->
+                        <!--<img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Second slide">-->
+                        <!--<i class="glyphicon glyphicon-trash" (click)="deleteImg(index, item)"></i>-->
+                      <!--</div>-->
+                      <!--<div class="item">-->
+                        <!--<img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Third slide">-->
+                        <!--<i class="glyphicon glyphicon-trash" (click)="deleteImg(index, item)"></i>-->
+                      <!--</div>-->
+                      <!--<div class="item">-->
+                        <!--<img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Forth slide">-->
+                        <!--<i class="glyphicon glyphicon-trash" (click)="deleteImg(index, item)"></i>-->
+                      <!--</div>-->
+                      <!--<div class="item">-->
+                        <!--<img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Fifth slide">-->
+                        <!--<i class="glyphicon glyphicon-trash" (click)="deleteImg(index, item)"></i>-->
+                      <!--</div>-->
+                      <!--<div class="item">-->
+                        <!--<img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Sixth slide">-->
+                        <!--<i class="glyphicon glyphicon-trash" (click)="deleteImg(index, item)"></i>-->
+                      <!--</div>-->
+                      <!--<div class="item">-->
+                        <!--<img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Seventh slide">-->
+                        <!--<i class="glyphicon glyphicon-trash" (click)="deleteImg(index, item)"></i>-->
+                      <!--</div>-->
+                    <!--</div>-->
+                    <!--<a class="carousel-control left" style="top:300px;" href="#myCarouse0"-->
+                       <!--data-slide="prev">&lsaquo;-->
+                    <!--</a>-->
+                    <!--<a class="carousel-control right" style="top:300px;" href="#myCarouse0"-->
+                       <!--data-slide="next">&rsaquo;-->
+                    <!--</a>-->
+                  <!--</div>-->
+                <!--</div>-->
+                <!--<div class="modal-footer" style="border-top: none;">-->
+                <!--</div>-->
+              <!--</div>&lt;!&ndash; /.modal-content &ndash;&gt;-->
+            <!--</div>&lt;!&ndash; /.modal &ndash;&gt;-->
+          <!--</div>-->
+          <!--<p style="text-align: center;padding-top: 10px;">营业执照</p>-->
+          <!--&lt;!&ndash;<input type="file" />&ndash;&gt;-->
+          <!--<div class="file-div">-->
+            <!--<div class="newFile">上传图片</div>-->
+            <!--<input type="file" class="selectFile"/>-->
+          <!--</div>-->
+          <!--&lt;!&ndash;<a href="#nowhere" style="padding-left:5px;color:#FFB717;text-decoration: underline">上传图片</a>&ndash;&gt;-->
+        <!--</div>-->
+        <!--<div class="col-md-1" style="padding-left:0px;padding-right:0;margin-right: 40px;">-->
+          <!--<img src="http://placehold.it/70x70" data-toggle="modal" data-target="#myModal1">-->
+          <!--<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">-->
+            <!--<div class="modal-dialog">-->
+              <!--<div class="modal-content">-->
+                <!--<div class="modal-header" style="border-bottom: none;">-->
+                  <!--<button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="color:#fff;border:1px solid #f2f2f2;border-radius: 50%;">&times;</button>-->
+                  <!--&lt;!&ndash;<h4 class="modal-title" id="myModalLabel">《易智造云工厂竞标系统用户条款》</h4>&ndash;&gt;-->
+                <!--</div>-->
+                <!--<div class="modal-body">-->
+                  <!--<div id="myCarouse1" class="carousel slide">-->
+                    <!--<ol class="carousel-indicators" style="bottom:-95px;">-->
+                      <!--<li data-target="#myCarouse1" data-slide-to="0"></li>-->
+                      <!--<li class="active" data-target="#myCarouse1" data-slide-to="1"></li>-->
+                      <!--<li data-target="#myCarouse1" data-slide-to="2"></li>-->
+                      <!--<li data-target="#myCarouse1" data-slide-to="3"></li>-->
+                      <!--<li data-target="#myCarouse1" data-slide-to="4"></li>-->
+                      <!--<li data-target="#myCarouse1" data-slide-to="5"></li>-->
+                      <!--<li data-target="#myCarouse1" data-slide-to="6"></li>-->
+                    <!--</ol>-->
+                    <!--<div class="carousel-inner">-->
+                      <!--<div class="item">-->
+                        <!--<img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="First slide">-->
+                        <!--<i class="glyphicon glyphicon-trash" (click)="deleteImg(index, item)"></i>-->
+                      <!--</div>-->
+                      <!--<div class="item active">-->
+                        <!--<img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Second slide">-->
+                        <!--<i class="glyphicon glyphicon-trash" (click)="deleteImg(index, item)"></i>-->
+                      <!--</div>-->
+                      <!--<div class="item">-->
+                        <!--<img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Third slide">-->
+                        <!--<i class="glyphicon glyphicon-trash" (click)="deleteImg(index, item)"></i>-->
+                      <!--</div>-->
+                      <!--<div class="item">-->
+                        <!--<img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Forth slide">-->
+                        <!--<i class="glyphicon glyphicon-trash" (click)="deleteImg(index, item)"></i>-->
+                      <!--</div>-->
+                      <!--<div class="item">-->
+                        <!--<img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Fifth slide">-->
+                        <!--<i class="glyphicon glyphicon-trash" (click)="deleteImg(index, item)"></i>-->
+                      <!--</div>-->
+                      <!--<div class="item">-->
+                        <!--<img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Sixth slide">-->
+                        <!--<i class="glyphicon glyphicon-trash" (click)="deleteImg(index, item)"></i>-->
+                      <!--</div>-->
+                      <!--<div class="item">-->
+                        <!--<img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Seventh slide">-->
+                        <!--<i class="glyphicon glyphicon-trash" (click)="deleteImg(index, item)"></i>-->
+                      <!--</div>-->
+                    <!--</div>-->
+                    <!--<a class="carousel-control left" style="top:300px;" href="#myCarouse1"-->
+                       <!--data-slide="prev">&lsaquo;-->
+                    <!--</a>-->
+                    <!--<a class="carousel-control right" style="top:300px;" href="#myCarouse1"-->
+                       <!--data-slide="next">&rsaquo;-->
+                    <!--</a>-->
+                  <!--</div>-->
+                <!--</div>-->
+                <!--<div class="modal-footer" style="border-top: none;">-->
 
-                </div>
-              </div><!-- /.modal-content -->
-            </div><!-- /.modal -->
-          </div>
-          <p style="text-align: center;padding-top: 10px;">营业执照</p>
-          <!--<input type="file" />-->
-          <div class="file-div">
-            <div class="newFile">上传图片</div>
-            <input type="file" class="selectFile"/>
-          </div>
-          <!--<a href="#nowhere" style="padding-left:5px;color:#FFB717;text-decoration: underline">上传图片</a>-->
-        </div>
-        <div class="col-md-1" style="padding-left:0px;padding-right:0;margin-right: 40px;">
-          <img src="http://placehold.it/70x70" data-toggle="modal" data-target="#myModal1">
-          <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header" style="border-bottom: none;">
-                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="color:#fff;border:1px solid #f2f2f2;border-radius: 50%;">&times;</button>
-                  <!--<h4 class="modal-title" id="myModalLabel">《易智造云工厂竞标系统用户条款》</h4>-->
-                </div>
-                <div class="modal-body">
-                  <div id="myCarouse1" class="carousel slide">
-                    <ol class="carousel-indicators" style="bottom:-95px;">
-                      <li class="active" data-target="#myCarouse1" data-slide-to="0"></li>
-                      <li data-target="#myCarouse1" data-slide-to="1"></li>
-                      <li data-target="#myCarouse1" data-slide-to="2"></li>
-                      <li data-target="#myCarouse1" data-slide-to="3"></li>
-                      <li data-target="#myCarouse1" data-slide-to="4"></li>
-                      <li data-target="#myCarouse1" data-slide-to="5"></li>
-                      <li data-target="#myCarouse1" data-slide-to="6"></li>
-                    </ol>
-                    <div class="carousel-inner">
-                      <div class="item active">
-                        <img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="First slide">
-                      </div>
-                      <div class="item">
-                        <img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Second slide">
-                      </div>
-                      <div class="item">
-                        <img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Third slide">
-                      </div>
-                      <div class="item">
-                        <img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Forth slide">
-                      </div>
-                      <div class="item">
-                        <img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Fifth slide">
-                      </div>
-                      <div class="item">
-                        <img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Sixth slide">
-                      </div>
-                      <div class="item">
-                        <img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Seventh slide">
-                      </div>
-                    </div>
-                    <a class="carousel-control left" style="top:300px;" href="#myCarouse1"
-                       data-slide="prev">&lsaquo;
-                    </a>
-                    <a class="carousel-control right" style="top:300px;" href="#myCarouse1"
-                       data-slide="next">&rsaquo;
-                    </a>
-                  </div>
-                </div>
-                <div class="modal-footer" style="border-top: none;">
+                <!--</div>-->
+              <!--</div>&lt;!&ndash; /.modal-content &ndash;&gt;-->
+            <!--</div>&lt;!&ndash; /.modal &ndash;&gt;-->
+          <!--</div>-->
+          <!--<p style="text-align: center;padding-top: 10px;">体系认证</p>-->
+          <!--<div class="file-div">-->
+            <!--<div class="newFile">上传图片</div>-->
+            <!--<input type="file" class="selectFile"/>-->
+          <!--</div>-->
+        <!--</div>-->
+        <!--<div class="col-md-1" style="padding-left:0;padding-right:0;margin-right: 40px;">-->
+          <!--<img src="http://placehold.it/70x70" data-toggle="modal" data-target="#myModal2">-->
+          <!--<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">-->
+            <!--<div class="modal-dialog">-->
+              <!--<div class="modal-content">-->
+                <!--<div class="modal-header" style="border-bottom: none;">-->
+                  <!--<button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="color:#fff;border:1px solid #f2f2f2;border-radius: 50%;">&times;</button>-->
+                  <!--&lt;!&ndash;<h4 class="modal-title" id="myModalLabel">《易智造云工厂竞标系统用户条款》</h4>&ndash;&gt;-->
+                <!--</div>-->
+                <!--<div class="modal-body">-->
+                  <!--<div id="myCarouse2" class="carousel slide">-->
+                    <!--<ol class="carousel-indicators" style="bottom:-95px;">-->
+                      <!--<li data-target="#myCarouse2" data-slide-to="0"></li>-->
+                      <!--<li data-target="#myCarouse2" data-slide-to="1"></li>-->
+                      <!--<li class="active" data-target="#myCarouse2" data-slide-to="2"></li>-->
+                      <!--<li data-target="#myCarouse2" data-slide-to="3"></li>-->
+                      <!--<li data-target="#myCarouse2" data-slide-to="4"></li>-->
+                      <!--<li data-target="#myCarouse2" data-slide-to="5"></li>-->
+                      <!--<li data-target="#myCarouse2" data-slide-to="6"></li>-->
+                    <!--</ol>-->
+                    <!--<div class="carousel-inner">-->
+                      <!--<div class="item">-->
+                        <!--<img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="First slide">-->
+                        <!--<i class="glyphicon glyphicon-trash" (click)="deleteImg(index, item)"></i>-->
+                      <!--</div>-->
+                      <!--<div class="item">-->
+                        <!--<img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Second slide">-->
+                        <!--<i class="glyphicon glyphicon-trash" (click)="deleteImg(index, item)"></i>-->
+                      <!--</div>-->
+                      <!--<div class="item active">-->
+                        <!--<img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Third slide">-->
+                        <!--<i class="glyphicon glyphicon-trash" (click)="deleteImg(index, item)"></i>-->
+                      <!--</div>-->
+                      <!--<div class="item">-->
+                        <!--<img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Forth slide">-->
+                        <!--<i class="glyphicon glyphicon-trash" (click)="deleteImg(index, item)"></i>-->
+                      <!--</div>-->
+                      <!--<div class="item">-->
+                        <!--<img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Fifth slide">-->
+                        <!--<i class="glyphicon glyphicon-trash" (click)="deleteImg(index, item)"></i>-->
+                      <!--</div>-->
+                      <!--<div class="item">-->
+                        <!--<img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Sixth slide">-->
+                        <!--<i class="glyphicon glyphicon-trash" (click)="deleteImg(index, item)"></i>-->
+                      <!--</div>-->
+                      <!--<div class="item">-->
+                        <!--<img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Seventh slide">-->
+                        <!--<i class="glyphicon glyphicon-trash" (click)="deleteImg(index, item)"></i>-->
+                      <!--</div>-->
+                    <!--</div>-->
+                    <!--<a class="carousel-control left" style="top:300px;" href="#myCarouse2"-->
+                       <!--data-slide="prev">&lsaquo;-->
+                    <!--</a>-->
+                    <!--<a class="carousel-control right" style="top:300px;" href="#myCarouse2"-->
+                       <!--data-slide="next">&rsaquo;-->
+                    <!--</a>-->
+                  <!--</div>-->
+                <!--</div>-->
+                <!--<div class="modal-footer" style="border-top: none;">-->
 
-                </div>
-              </div><!-- /.modal-content -->
-            </div><!-- /.modal -->
-          </div>
-          <p style="text-align: center;padding-top: 10px;">体系认证</p>
-          <div class="file-div">
-            <div class="newFile">上传图片</div>
-            <input type="file" class="selectFile"/>
-          </div>
-        </div>
-        <div class="col-md-1" style="padding-left:0;padding-right:0;margin-right: 40px;">
-          <img src="http://placehold.it/70x70" data-toggle="modal" data-target="#myModal2">
-          <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header" style="border-bottom: none;">
-                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="color:#fff;border:1px solid #f2f2f2;border-radius: 50%;">&times;</button>
-                  <!--<h4 class="modal-title" id="myModalLabel">《易智造云工厂竞标系统用户条款》</h4>-->
-                </div>
-                <div class="modal-body">
-                  <div id="myCarouse2" class="carousel slide">
-                    <ol class="carousel-indicators" style="bottom:-95px;">
-                      <li class="active" data-target="#myCarouse2" data-slide-to="0"></li>
-                      <li data-target="#myCarouse2" data-slide-to="1"></li>
-                      <li data-target="#myCarouse2" data-slide-to="2"></li>
-                      <li data-target="#myCarouse2" data-slide-to="3"></li>
-                      <li data-target="#myCarouse2" data-slide-to="4"></li>
-                      <li data-target="#myCarouse2" data-slide-to="5"></li>
-                      <li data-target="#myCarouse2" data-slide-to="6"></li>
-                    </ol>
-                    <div class="carousel-inner">
-                      <div class="item active">
-                        <img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="First slide">
-                      </div>
-                      <div class="item">
-                        <img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Second slide">
-                      </div>
-                      <div class="item">
-                        <img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Third slide">
-                      </div>
-                      <div class="item">
-                        <img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Forth slide">
-                      </div>
-                      <div class="item">
-                        <img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Fifth slide">
-                      </div>
-                      <div class="item">
-                        <img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Sixth slide">
-                      </div>
-                      <div class="item">
-                        <img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Seventh slide">
-                      </div>
-                    </div>
-                    <a class="carousel-control left" style="top:300px;" href="#myCarouse2"
-                       data-slide="prev">&lsaquo;
-                    </a>
-                    <a class="carousel-control right" style="top:300px;" href="#myCarouse2"
-                       data-slide="next">&rsaquo;
-                    </a>
-                  </div>
-                </div>
-                <div class="modal-footer" style="border-top: none;">
+                <!--</div>-->
+              <!--</div>&lt;!&ndash; /.modal-content &ndash;&gt;-->
+            <!--</div>&lt;!&ndash; /.modal &ndash;&gt;-->
+          <!--</div>-->
+          <!--<p style="text-align: center;padding-top: 10px;">产品资质</p>-->
+          <!--<div class="file-div">-->
+            <!--<div class="newFile">上传图片</div>-->
+            <!--<input type="file" class="selectFile"/>-->
+          <!--</div>-->
+        <!--</div>-->
+        <!--<div class="col-md-1" style="padding-left:0;padding-right:0;margin-right: 40px;">-->
+          <!--<img src="http://placehold.it/70x70" data-toggle="modal" data-target="#myModal3">-->
+          <!--<div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">-->
+            <!--<div class="modal-dialog">-->
+              <!--<div class="modal-content">-->
+                <!--<div class="modal-header" style="border-bottom: none;">-->
+                  <!--<button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="color:#fff;border:1px solid #f2f2f2;border-radius: 50%;">&times;</button>-->
+                  <!--&lt;!&ndash;<h4 class="modal-title" id="myModalLabel">《易智造云工厂竞标系统用户条款》</h4>&ndash;&gt;-->
+                <!--</div>-->
+                <!--<div class="modal-body">-->
+                  <!--<div id="myCarouse3" class="carousel slide">-->
+                    <!--<ol class="carousel-indicators" style="bottom:-95px;">-->
+                      <!--<li data-target="#myCarouse3" data-slide-to="0"></li>-->
+                      <!--<li data-target="#myCarouse3" data-slide-to="1"></li>-->
+                      <!--<li data-target="#myCarouse3" data-slide-to="2"></li>-->
+                      <!--<li class="active" data-target="#myCarouse3" data-slide-to="3"></li>-->
+                      <!--<li data-target="#myCarouse3" data-slide-to="4"></li>-->
+                      <!--<li data-target="#myCarouse3" data-slide-to="5"></li>-->
+                      <!--<li data-target="#myCarouse3" data-slide-to="6"></li>-->
+                    <!--</ol>-->
+                    <!--<div class="carousel-inner">-->
+                      <!--<div class="item">-->
+                        <!--<img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="First slide">-->
+                        <!--<i class="glyphicon glyphicon-trash" (click)="deleteImg(index, item)"></i>-->
+                      <!--</div>-->
+                      <!--<div class="item">-->
+                        <!--<img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Second slide">-->
+                        <!--<i class="glyphicon glyphicon-trash" (click)="deleteImg(index, item)"></i>-->
+                      <!--</div>-->
+                      <!--<div class="item">-->
+                        <!--<img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Third slide">-->
+                        <!--<i class="glyphicon glyphicon-trash" (click)="deleteImg(index, item)"></i>-->
+                      <!--</div>-->
+                      <!--<div class="item active">-->
+                        <!--<img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Forth slide">-->
+                        <!--<i class="glyphicon glyphicon-trash" (click)="deleteImg(index, item)"></i>-->
+                      <!--</div>-->
+                      <!--<div class="item">-->
+                        <!--<img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Fifth slide">-->
+                        <!--<i class="glyphicon glyphicon-trash" (click)="deleteImg(index, item)"></i>-->
+                      <!--</div>-->
+                      <!--<div class="item">-->
+                        <!--<img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Sixth slide">-->
+                        <!--<i class="glyphicon glyphicon-trash" (click)="deleteImg(index, item)"></i>-->
+                      <!--</div>-->
+                      <!--<div class="item">-->
+                        <!--<img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Seventh slide">-->
+                        <!--<i class="glyphicon glyphicon-trash" (click)="deleteImg(index, item)"></i>-->
+                      <!--</div>-->
+                    <!--</div>-->
+                    <!--<a class="carousel-control left" style="top:300px;" href="#myCarouse3"-->
+                       <!--data-slide="prev">&lsaquo;-->
+                    <!--</a>-->
+                    <!--<a class="carousel-control right" style="top:300px;" href="#myCarouse3"-->
+                       <!--data-slide="next">&rsaquo;-->
+                    <!--</a>-->
+                  <!--</div>-->
+                <!--</div>-->
+                <!--<div class="modal-footer" style="border-top: none;">-->
 
-                </div>
-              </div><!-- /.modal-content -->
-            </div><!-- /.modal -->
-          </div>
-          <p style="text-align: center;padding-top: 10px;">产品资质</p>
-          <div class="file-div">
-            <div class="newFile">上传图片</div>
-            <input type="file" class="selectFile"/>
-          </div>
-        </div>
-        <div class="col-md-1" style="padding-left:0;padding-right:0;margin-right: 40px;">
-          <img src="http://placehold.it/70x70" data-toggle="modal" data-target="#myModal3">
-          <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header" style="border-bottom: none;">
-                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="color:#fff;border:1px solid #f2f2f2;border-radius: 50%;">&times;</button>
-                  <!--<h4 class="modal-title" id="myModalLabel">《易智造云工厂竞标系统用户条款》</h4>-->
-                </div>
-                <div class="modal-body">
-                  <div id="myCarouse3" class="carousel slide">
-                    <ol class="carousel-indicators" style="bottom:-95px;">
-                      <li class="active" data-target="#myCarouse3" data-slide-to="0"></li>
-                      <li data-target="#myCarouse3" data-slide-to="1"></li>
-                      <li data-target="#myCarouse3" data-slide-to="2"></li>
-                      <li data-target="#myCarouse3" data-slide-to="3"></li>
-                      <li data-target="#myCarouse3" data-slide-to="4"></li>
-                      <li data-target="#myCarouse3" data-slide-to="5"></li>
-                      <li data-target="#myCarouse3" data-slide-to="6"></li>
-                    </ol>
-                    <div class="carousel-inner">
-                      <div class="item active">
-                        <img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="First slide">
-                      </div>
-                      <div class="item">
-                        <img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Second slide">
-                      </div>
-                      <div class="item">
-                        <img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Third slide">
-                      </div>
-                      <div class="item">
-                        <img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Forth slide">
-                      </div>
-                      <div class="item">
-                        <img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Fifth slide">
-                      </div>
-                      <div class="item">
-                        <img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Sixth slide">
-                      </div>
-                      <div class="item">
-                        <img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Seventh slide">
-                      </div>
-                    </div>
-                    <a class="carousel-control left" style="top:300px;" href="#myCarouse3"
-                       data-slide="prev">&lsaquo;
-                    </a>
-                    <a class="carousel-control right" style="top:300px;" href="#myCarouse3"
-                       data-slide="next">&rsaquo;
-                    </a>
-                  </div>
-                </div>
-                <div class="modal-footer" style="border-top: none;">
+                <!--</div>-->
+              <!--</div>&lt;!&ndash; /.modal-content &ndash;&gt;-->
+            <!--</div>&lt;!&ndash; /.modal &ndash;&gt;-->
+          <!--</div>-->
+          <!--<p style="text-align: center;padding-top: 10px;">工厂照片</p>-->
+          <!--<div class="file-div">-->
+            <!--<div class="newFile">上传图片</div>-->
+            <!--<input type="file" class="selectFile"/>-->
+          <!--</div>-->
+        <!--</div>-->
+        <!--<div class="col-md-1" style="padding-left:0;padding-right:0;margin-right: 40px;">-->
+          <!--<img src="http://placehold.it/70x70" data-toggle="modal" data-target="#myModal4">-->
+          <!--<div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">-->
+            <!--<div class="modal-dialog">-->
+              <!--<div class="modal-content">-->
+                <!--<div class="modal-header" style="border-bottom: none;">-->
+                  <!--<button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="color:#fff;border:1px solid #f2f2f2;border-radius: 50%;">&times;</button>-->
+                  <!--&lt;!&ndash;<h4 class="modal-title" id="myModalLabel">《易智造云工厂竞标系统用户条款》</h4>&ndash;&gt;-->
+                <!--</div>-->
+                <!--<div class="modal-body">-->
+                  <!--<div id="myCarouse4" class="carousel slide">-->
+                    <!--<ol class="carousel-indicators" style="bottom:-95px;">-->
+                      <!--<li data-target="#myCarouse4" data-slide-to="0"></li>-->
+                      <!--<li data-target="#myCarouse4" data-slide-to="1"></li>-->
+                      <!--<li data-target="#myCarouse4" data-slide-to="2"></li>-->
+                      <!--<li data-target="#myCarouse4" data-slide-to="3"></li>-->
+                      <!--<li class="active" data-target="#myCarouse4" data-slide-to="4"></li>-->
+                      <!--<li data-target="#myCarouse4" data-slide-to="5"></li>-->
+                      <!--<li data-target="#myCarouse4" data-slide-to="6"></li>-->
+                    <!--</ol>-->
+                    <!--<div class="carousel-inner">-->
+                      <!--<div class="item">-->
+                        <!--<img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="First slide">-->
+                        <!--<i class="glyphicon glyphicon-trash" (click)="deleteImg(index, item)"></i>-->
+                      <!--</div>-->
+                      <!--<div class="item">-->
+                        <!--<img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Second slide">-->
+                        <!--<i class="glyphicon glyphicon-trash" (click)="deleteImg(index, item)"></i>-->
+                      <!--</div>-->
+                      <!--<div class="item">-->
+                        <!--<img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Third slide">-->
+                        <!--<i class="glyphicon glyphicon-trash" (click)="deleteImg(index, item)"></i>-->
+                      <!--</div>-->
+                      <!--<div class="item">-->
+                        <!--<img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Forth slide">-->
+                        <!--<i class="glyphicon glyphicon-trash" (click)="deleteImg(index, item)"></i>-->
+                      <!--</div>-->
+                      <!--<div class="item active">-->
+                        <!--<img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Fifth slide">-->
+                        <!--<i class="glyphicon glyphicon-trash" (click)="deleteImg(index, item)"></i>-->
+                      <!--</div>-->
+                      <!--<div class="item">-->
+                        <!--<img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Sixth slide">-->
+                        <!--<i class="glyphicon glyphicon-trash" (click)="deleteImg(index, item)"></i>-->
+                      <!--</div>-->
+                      <!--<div class="item">-->
+                        <!--<img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Seventh slide">-->
+                        <!--<i class="glyphicon glyphicon-trash" (click)="deleteImg(index, item)"></i>-->
+                      <!--</div>-->
+                    <!--</div>-->
+                    <!--<a class="carousel-control left" style="top:300px;" href="#myCarouse4"-->
+                       <!--data-slide="prev">&lsaquo;-->
+                    <!--</a>-->
+                    <!--<a class="carousel-control right" style="top:300px;" href="#myCarouse4"-->
+                       <!--data-slide="next">&rsaquo;-->
+                    <!--</a>-->
+                  <!--</div>-->
+                <!--</div>-->
+                <!--<div class="modal-footer" style="border-top: none;">-->
 
-                </div>
-              </div><!-- /.modal-content -->
-            </div><!-- /.modal -->
-          </div>
-          <p style="text-align: center;padding-top: 10px;">工厂照片</p>
-          <div class="file-div">
-            <div class="newFile">上传图片</div>
-            <input type="file" class="selectFile"/>
-          </div>
-        </div>
-        <div class="col-md-1" style="padding-left:0;padding-right:0;margin-right: 40px;">
-          <img src="http://placehold.it/70x70" data-toggle="modal" data-target="#myModal4">
-          <div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header" style="border-bottom: none;">
-                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="color:#fff;border:1px solid #f2f2f2;border-radius: 50%;">&times;</button>
-                  <!--<h4 class="modal-title" id="myModalLabel">《易智造云工厂竞标系统用户条款》</h4>-->
-                </div>
-                <div class="modal-body">
-                  <div id="myCarouse4" class="carousel slide">
-                    <ol class="carousel-indicators" style="bottom:-95px;">
-                      <li class="active" data-target="#myCarouse4" data-slide-to="0"></li>
-                      <li data-target="#myCarouse4" data-slide-to="1"></li>
-                      <li data-target="#myCarouse4" data-slide-to="2"></li>
-                      <li data-target="#myCarouse4" data-slide-to="3"></li>
-                      <li data-target="#myCarouse4" data-slide-to="4"></li>
-                      <li data-target="#myCarouse4" data-slide-to="5"></li>
-                      <li data-target="#myCarouse4" data-slide-to="6"></li>
-                    </ol>
-                    <div class="carousel-inner">
-                      <div class="item active">
-                        <img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="First slide">
-                      </div>
-                      <div class="item">
-                        <img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Second slide">
-                      </div>
-                      <div class="item">
-                        <img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Third slide">
-                      </div>
-                      <div class="item">
-                        <img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Forth slide">
-                      </div>
-                      <div class="item">
-                        <img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Fifth slide">
-                      </div>
-                      <div class="item">
-                        <img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Sixth slide">
-                      </div>
-                      <div class="item">
-                        <img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Seventh slide">
-                      </div>
-                    </div>
-                    <a class="carousel-control left" style="top:300px;" href="#myCarouse4"
-                       data-slide="prev">&lsaquo;
-                    </a>
-                    <a class="carousel-control right" style="top:300px;" href="#myCarouse4"
-                       data-slide="next">&rsaquo;
-                    </a>
-                  </div>
-                </div>
-                <div class="modal-footer" style="border-top: none;">
+                <!--</div>-->
+              <!--</div>&lt;!&ndash; /.modal-content &ndash;&gt;-->
+            <!--</div>&lt;!&ndash; /.modal &ndash;&gt;-->
+          <!--</div>-->
+          <!--<p style="text-align: center;padding-top: 10px;">设备照片</p>-->
+          <!--<div class="file-div">-->
+            <!--<div class="newFile">上传图片</div>-->
+            <!--<input type="file" class="selectFile"/>-->
+          <!--</div>-->
+        <!--</div>-->
+        <!--<div class="col-md-1" style="padding-left:0;padding-right:0;margin-right: 40px;">-->
+          <!--<img src="http://placehold.it/70x70" data-toggle="modal" data-target="#myModal5">-->
+          <!--<div class="modal fade" id="myModal5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">-->
+            <!--<div class="modal-dialog">-->
+              <!--<div class="modal-content">-->
+                <!--<div class="modal-header" style="border-bottom: none;">-->
+                  <!--<button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="color:#fff;border:1px solid #f2f2f2;border-radius: 50%;">&times;</button>-->
+                  <!--&lt;!&ndash;<h4 class="modal-title" id="myModalLabel">《易智造云工厂竞标系统用户条款》</h4>&ndash;&gt;-->
+                <!--</div>-->
+                <!--<div class="modal-body">-->
+                  <!--<div id="myCarouse5" class="carousel slide">-->
+                    <!--<ol class="carousel-indicators" style="bottom:-95px;">-->
+                      <!--<li data-target="#myCarouse5" data-slide-to="0"></li>-->
+                      <!--<li data-target="#myCarouse5" data-slide-to="1"></li>-->
+                      <!--<li data-target="#myCarouse5" data-slide-to="2"></li>-->
+                      <!--<li data-target="#myCarouse5" data-slide-to="3"></li>-->
+                      <!--<li data-target="#myCarouse5" data-slide-to="4"></li>-->
+                      <!--<li class="active" data-target="#myCarouse5" data-slide-to="5"></li>-->
+                      <!--<li data-target="#myCarouse5" data-slide-to="6"></li>-->
+                    <!--</ol>-->
+                    <!--<div class="carousel-inner">-->
+                      <!--<div class="item">-->
+                        <!--<img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="First slide">-->
+                        <!--<i class="glyphicon glyphicon-trash" (click)="deleteImg(index, item)"></i>-->
+                      <!--</div>-->
+                      <!--<div class="item">-->
+                        <!--<img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Second slide">-->
+                        <!--<i class="glyphicon glyphicon-trash" (click)="deleteImg(index, item)"></i>-->
+                      <!--</div>-->
+                      <!--<div class="item">-->
+                        <!--<img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Third slide">-->
+                        <!--<i class="glyphicon glyphicon-trash" (click)="deleteImg(index, item)"></i>-->
+                      <!--</div>-->
+                      <!--<div class="item">-->
+                        <!--<img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Forth slide">-->
+                        <!--<i class="glyphicon glyphicon-trash" (click)="deleteImg(index, item)"></i>-->
+                      <!--</div>-->
+                      <!--<div class="item">-->
+                        <!--<img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Fifth slide">-->
+                        <!--<i class="glyphicon glyphicon-trash" (click)="deleteImg(index, item)"></i>-->
+                      <!--</div>-->
+                      <!--<div class="item active">-->
+                        <!--<img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Sixth slide">-->
+                        <!--<i class="glyphicon glyphicon-trash" (click)="deleteImg(index, item)"></i>-->
+                      <!--</div>-->
+                      <!--<div class="item">-->
+                        <!--<img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Seventh slide">-->
+                        <!--<i class="glyphicon glyphicon-trash" (click)="deleteImg(index, item)"></i>-->
+                      <!--</div>-->
+                    <!--</div>-->
+                    <!--<a class="carousel-control left" style="top:300px;" href="#myCarouse5"-->
+                       <!--data-slide="prev">&lsaquo;-->
+                    <!--</a>-->
+                    <!--<a class="carousel-control right" style="top:300px;" href="#myCarouse5"-->
+                       <!--data-slide="next">&rsaquo;-->
+                    <!--</a>-->
+                  <!--</div>-->
+                <!--</div>-->
+                <!--<div class="modal-footer" style="border-top: none;">-->
 
-                </div>
-              </div><!-- /.modal-content -->
-            </div><!-- /.modal -->
-          </div>
-          <p style="text-align: center;padding-top: 10px;">设备照片</p>
-          <div class="file-div">
-            <div class="newFile">上传图片</div>
-            <input type="file" class="selectFile"/>
-          </div>
-        </div>
-        <div class="col-md-1" style="padding-left:0;padding-right:0;margin-right: 40px;">
-          <img src="http://placehold.it/70x70" data-toggle="modal" data-target="#myModal5">
-          <div class="modal fade" id="myModal5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header" style="border-bottom: none;">
-                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="color:#fff;border:1px solid #f2f2f2;border-radius: 50%;">&times;</button>
-                  <!--<h4 class="modal-title" id="myModalLabel">《易智造云工厂竞标系统用户条款》</h4>-->
-                </div>
-                <div class="modal-body">
-                  <div id="myCarouse5" class="carousel slide">
-                    <ol class="carousel-indicators" style="bottom:-95px;">
-                      <li class="active" data-target="#myCarouse5" data-slide-to="0"></li>
-                      <li data-target="#myCarouse5" data-slide-to="1"></li>
-                      <li data-target="#myCarouse5" data-slide-to="2"></li>
-                      <li data-target="#myCarouse5" data-slide-to="3"></li>
-                      <li data-target="#myCarouse5" data-slide-to="4"></li>
-                      <li data-target="#myCarouse5" data-slide-to="5"></li>
-                      <li data-target="#myCarouse5" data-slide-to="6"></li>
-                    </ol>
-                    <div class="carousel-inner">
-                      <div class="item active">
-                        <img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="First slide">
-                      </div>
-                      <div class="item">
-                        <img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Second slide">
-                      </div>
-                      <div class="item">
-                        <img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Third slide">
-                      </div>
-                      <div class="item">
-                        <img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Forth slide">
-                      </div>
-                      <div class="item">
-                        <img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Fifth slide">
-                      </div>
-                      <div class="item">
-                        <img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Sixth slide">
-                      </div>
-                      <div class="item">
-                        <img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Seventh slide">
-                      </div>
-                    </div>
-                    <a class="carousel-control left" style="top:300px;" href="#myCarouse5"
-                       data-slide="prev">&lsaquo;
-                    </a>
-                    <a class="carousel-control right" style="top:300px;" href="#myCarouse5"
-                       data-slide="next">&rsaquo;
-                    </a>
-                  </div>
-                </div>
-                <div class="modal-footer" style="border-top: none;">
+                <!--</div>-->
+              <!--</div>&lt;!&ndash; /.modal-content &ndash;&gt;-->
+            <!--</div>&lt;!&ndash; /.modal &ndash;&gt;-->
+          <!--</div>-->
+          <!--<p style="text-align: center;padding-top: 10px;">生产车间</p>-->
+          <!--<div class="file-div">-->
+            <!--<div class="newFile">上传图片</div>-->
+            <!--<input type="file" class="selectFile"/>-->
+          <!--</div>-->
+        <!--</div>-->
+        <!--<div class="col-md-1" style="padding-left:0;padding-right:0;margin-right: 40px;">-->
+          <!--<img src="http://placehold.it/70x70" data-toggle="modal" data-target="#myModal6">-->
+          <!--<div class="modal fade" id="myModal6" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">-->
+            <!--<div class="modal-dialog">-->
+              <!--<div class="modal-content">-->
+                <!--<div class="modal-header" style="border-bottom: none;">-->
+                  <!--<button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="color:#fff;border:1px solid #f2f2f2;border-radius: 50%;">&times;</button>-->
+                  <!--&lt;!&ndash;<h4 class="modal-title" id="myModalLabel">《易智造云工厂竞标系统用户条款》</h4>&ndash;&gt;-->
+                <!--</div>-->
+                <!--<div class="modal-body">-->
+                  <!--<div id="myCarouse6" class="carousel slide">-->
+                    <!--<ol class="carousel-indicators" style="bottom:-95px;">-->
+                      <!--<li data-target="#myCarouse6" data-slide-to="0"></li>-->
+                      <!--<li data-target="#myCarouse6" data-slide-to="1"></li>-->
+                      <!--<li data-target="#myCarouse6" data-slide-to="2"></li>-->
+                      <!--<li data-target="#myCarouse6" data-slide-to="3"></li>-->
+                      <!--<li data-target="#myCarouse6" data-slide-to="4"></li>-->
+                      <!--<li data-target="#myCarouse6" data-slide-to="5"></li>-->
+                      <!--<li class="active" data-target="#myCarouse6" data-slide-to="6"></li>-->
+                    <!--</ol>-->
+                    <!--<div class="carousel-inner">-->
+                      <!--<div class="item">-->
+                        <!--<img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="First slide">-->
+                        <!--<i class="glyphicon glyphicon-trash" (click)="deleteImg(index, item)"></i>-->
+                      <!--</div>-->
+                      <!--<div class="item">-->
+                        <!--<img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Second slide">-->
+                        <!--<i class="glyphicon glyphicon-trash" (click)="deleteImg(index, item)"></i>-->
+                      <!--</div>-->
+                      <!--<div class="item">-->
+                        <!--<img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Third slide">-->
+                        <!--<i class="glyphicon glyphicon-trash" (click)="deleteImg(index, item)"></i>-->
+                      <!--</div>-->
+                      <!--<div class="item">-->
+                        <!--<img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Forth slide">-->
+                        <!--<i class="glyphicon glyphicon-trash" (click)="deleteImg(index, item)"></i>-->
+                      <!--</div>-->
+                      <!--<div class="item">-->
+                        <!--<img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Fifth slide">-->
+                        <!--<i class="glyphicon glyphicon-trash" (click)="deleteImg(index, item)"></i>-->
+                      <!--</div>-->
+                      <!--<div class="item">-->
+                        <!--<img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Sixth slide">-->
+                        <!--<i class="glyphicon glyphicon-trash" (click)="deleteImg(index, item)"></i>-->
+                      <!--</div>-->
+                      <!--<div class="item active">-->
+                        <!--<img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Seventh slide">-->
+                        <!--<i class="glyphicon glyphicon-trash" (click)="deleteImg(index, item)"></i>-->
+                      <!--</div>-->
+                    <!--</div>-->
+                    <!--<a class="carousel-control left" style="top:300px;" href="#myCarouse6"-->
+                       <!--data-slide="prev">&lsaquo;-->
+                    <!--</a>-->
+                    <!--<a class="carousel-control right" style="top:300px;" href="#myCarouse6"-->
+                       <!--data-slide="next">&rsaquo;-->
+                    <!--</a>-->
+                  <!--</div>-->
+                <!--</div>-->
+                <!--<div class="modal-footer" style="border-top: none;">-->
 
-                </div>
-              </div><!-- /.modal-content -->
-            </div><!-- /.modal -->
-          </div>
-          <p style="text-align: center;padding-top: 10px;">生产车间</p>
-          <div class="file-div">
-            <div class="newFile">上传图片</div>
-            <input type="file" class="selectFile"/>
-          </div>
-        </div>
-        <div class="col-md-1" style="padding-left:0;padding-right:0;margin-right: 40px;">
-          <img src="http://placehold.it/70x70" data-toggle="modal" data-target="#myModal6">
-          <div class="modal fade" id="myModal6" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header" style="border-bottom: none;">
-                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="color:#fff;border:1px solid #f2f2f2;border-radius: 50%;">&times;</button>
-                  <!--<h4 class="modal-title" id="myModalLabel">《易智造云工厂竞标系统用户条款》</h4>-->
-                </div>
-                <div class="modal-body">
-                  <div id="myCarouse6" class="carousel slide">
-                    <ol class="carousel-indicators" style="bottom:-95px;">
-                      <li class="active" data-target="#myCarouse6" data-slide-to="0"></li>
-                      <li data-target="#myCarouse6" data-slide-to="1"></li>
-                      <li data-target="#myCarouse6" data-slide-to="2"></li>
-                      <li data-target="#myCarouse6" data-slide-to="3"></li>
-                      <li data-target="#myCarouse6" data-slide-to="4"></li>
-                      <li data-target="#myCarouse6" data-slide-to="5"></li>
-                      <li data-target="#myCarouse6" data-slide-to="6"></li>
-                    </ol>
-                    <div class="carousel-inner">
-                      <div class="item active">
-                        <img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="First slide">
-                      </div>
-                      <div class="item">
-                        <img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Second slide">
-                      </div>
-                      <div class="item">
-                        <img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Third slide">
-                      </div>
-                      <div class="item">
-                        <img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Forth slide">
-                      </div>
-                      <div class="item">
-                        <img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Fifth slide">
-                      </div>
-                      <div class="item">
-                        <img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Sixth slide">
-                      </div>
-                      <div class="item">
-                        <img src="http://placehold.it/603x611" style="margin-left: 140px;" alt="Seventh slide">
-                      </div>
-                    </div>
-                    <a class="carousel-control left" style="top:300px;" href="#myCarouse6"
-                       data-slide="prev">&lsaquo;
-                    </a>
-                    <a class="carousel-control right" style="top:300px;" href="#myCarouse6"
-                       data-slide="next">&rsaquo;
-                    </a>
-                  </div>
-                </div>
-                <div class="modal-footer" style="border-top: none;">
-
-                </div>
-              </div><!-- /.modal-content -->
-            </div><!-- /.modal -->
-          </div>
-          <p style="text-align: center;padding-top: 10px;">其他照片</p>
-          <div class="file-div">
-            <div class="newFile">上传图片</div>
-            <input type="file" class="selectFile"/>
-          </div>
-        </div>
+                <!--</div>-->
+              <!--</div>&lt;!&ndash; /.modal-content &ndash;&gt;-->
+            <!--</div>&lt;!&ndash; /.modal &ndash;&gt;-->
+          <!--</div>-->
+          <!--<p style="text-align: center;padding-top: 10px;">其他照片</p>-->
+          <!--<div class="file-div">-->
+            <!--<div class="newFile">上传图片</div>-->
+            <!--<input type="file" class="selectFile" (change)="selectedFileOnChanged($event,3)" />-->
+          <!--</div>-->
+        <!--</div>-->
       </div>
       <div class="row" style="margin-top:15px;color:#ccc;width:800px;">
         <p>验厂认证分六大类上传，每类可上传最多3张图片，图片大小限制为1M以内，图片格式支持JPG、PNG、GIF。</p>
       </div>
       <div class="row">
         <!--<a href="#nowhere" style="float:right;color:#FFB717;text-decoration: underline">删除</a>-->
-        <button type="submit" [routerLink]="['./waitaudit']" class="btn btn-block btn-primary" style="height:42px;width:410px;margin-top:30px;margin-bottom:50px;background-color: #33cccc;font-size:16px;">提交审核</button>
+        <button type="submit" [routerLink]="['/register/waitaudit']" class="btn btn-block btn-primary" style="height:42px;width:410px;margin-top:30px;margin-bottom:50px;background-color: #33cccc;font-size:16px;">提交审核</button>
       </div>
     </form>
 

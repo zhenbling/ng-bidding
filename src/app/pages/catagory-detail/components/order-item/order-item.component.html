@@ -1,6 +1,6 @@
 <section [class.s-active]="seFlag" (mouseover) = "mouseOver()" (mouseout) = "mouseOut()">
   <div class="imgCo">
-    <img src="http://placehold.it/160x160" alt="标的图片">
+    <img src="http://placehold.it/160x160" alt="标的图片" (click)="gotoDetail()">
     <div class="mask">
       <img src="http://placehold.it/78x78" alt="标的状态">
     </div>
@@ -23,6 +23,7 @@
     <button>我要竞标</button>
   </div>
   <div>
-    <button class="btn btn-default btn-block" [class.action]="flag">一口价</button>
+    <app-final-price [finalPrice]="myfinalPrice"></app-final-price>
+    <!--<button class="btn btn-default btn-block" [class.action]="flag">一口价</button>-->
   </div>
 </section>

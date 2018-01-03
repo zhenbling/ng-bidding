@@ -1,0 +1,49 @@
+<accordion>
+  <accordion-group  panelClass="customClass" [isOpen]='true'  (isOpenChange)="openChange($event,'one')">
+    <div accordion-heading class="clearfix">
+      <span id="one-show">-</span><span id="one-hide" style="display: none">+</span>
+      <label>我的竞标</label>
+    </div>
+    <p (click)="jumpTo('',1)" [ngClass]="{'active':activeIndex=='1'}">竞标中(0)</p>
+    <p (click)="jumpTo('/winbidding',2)" [ngClass]="{'active':activeIndex=='2'}">已中标(0)</p>
+    <p (click)="jumpTo('/losebidding',3)" [ngClass]="{'active':activeIndex=='3'}">未中标(0)</p>
+  </accordion-group>
+  <accordion-group  panelClass="customClass" [isOpen]='true' (isOpenChange)="openChange($event,'two')">
+    <div accordion-heading class="clearfix">
+      <span id="two-show">-</span><span id="two-hide" style="display: none">+</span>
+      <label>我的合同</label>
+    </div>
+    <p (click)="jumpTo('/waitsigned',4)" [ngClass]="{'active':activeIndex=='4'}">待签订(3)</p>
+    <p (click)="jumpTo('/signed',5)" [ngClass]="{'active':activeIndex=='5'}">已签订(3)</p>
+    <p (click)="jumpTo('/firstpayment',6)" [ngClass]="{'active':activeIndex=='6'}">已付首付款(3)</p>
+    <p (click)="jumpTo('/examinegoods',7)" [ngClass]="{'active':activeIndex=='7'}">已验货(3)</p>
+    <p (click)="jumpTo('/paidtail',8)" [ngClass]="{'active':activeIndex=='8'}">已收尾款(3)</p>
+    <p (click)="jumpTo('/receivedgoods',9)" [ngClass]="{'active':activeIndex=='9'}">已收货(3)</p>
+  </accordion-group>
+  <accordion-group  panelClass="customClass" [isOpen]='true' (isOpenChange)="openChange($event,'three')">
+    <div accordion-heading class="clearfix">
+      <span id="three-show">-</span><span id="three-hide" style="display: none">+</span>
+      <label>我的账户</label>
+    </div>
+    <p>公司信息</p>
+    <p>操作员管理</p>
+    <p>修改密码</p>
+  </accordion-group>
+  <!--<accordion-group  panelClass="customClass" [isOpen]='true' (isOpenChange)="openChange($event,'four')">-->
+    <!--<div accordion-heading class="clearfix">-->
+      <!--<span id="four-show">-</span><span id="four-hide" style="display: none">+</span>-->
+      <!--<label>余额管理</label>-->
+    <!--</div>-->
+    <!--<p>我要提现</p>-->
+    <!--<p>交易明细</p>-->
+  <!--</accordion-group>-->
+  <!--<accordion-group  panelClass="customClass" [isOpen]='true' (isOpenChange)="openChange($event,'five')">-->
+    <!--<div accordion-heading class="clearfix">-->
+      <!--<span id="five-show">-</span><span id="five-hide" style="display: none">+</span>-->
+      <!--<label>帮助中心</label>-->
+    <!--</div>-->
+    <!--<p>我要提现</p>-->
+    <!--<p>交易明细</p>-->
+  <!--</accordion-group>-->
+</accordion>
+

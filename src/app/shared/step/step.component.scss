@@ -1,0 +1,33 @@
+.round {
+  width:28px;
+  height:28px;
+  border-radius: 50%;
+  background: #AEAEAE;
+}
+.round.blue {
+  width:28px;
+  height:28px;
+  border-radius: 50%;
+  background: #33cccc;
+}
+.round span {
+  color:#fff;
+  margin:10px;
+  vertical-align: sub;
+}
+.col-md-10 {
+  height:2px;
+}
+.line.on {
+  height:2px;
+  background: linear-gradient(to right,#33cccc,#fff);
+  margin:12px;
+}
+.line {
+  height:2px;
+  background: linear-gradient(to right,#AEAEAE,#fff);
+  margin:12px;
+}
+label, span {
+  color:#6D6D6D;
+}

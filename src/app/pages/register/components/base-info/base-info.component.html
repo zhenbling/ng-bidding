@@ -2,104 +2,120 @@
   <div class="step">
     <div class="row" style="margin-right:0;">
       <div class="col-md-2"></div>
-      <div class="col-md-2" style="padding-top:30px;">
-        <div class="row">
-          <div class="col-md-2">
-            <div class="round blue"><span>1</span></div>
-          </div>
-          <div class="col-md-10">
-            <div class="line on"></div>
-          </div>
-        </div>
-        <div class="row">
-          <span>填写基本信息</span>
-        </div>
-      </div>
-      <div class="col-md-2" style="padding-top:30px;">
-        <div class="row">
-          <div class="col-md-2">
-            <div class="round"><span>2</span></div>
-          </div>
-          <div class="col-md-10">
-            <div class="line"></div>
-          </div>
-        </div>
-        <div class="row">
-          <span>完善资质认证</span>
-        </div>
-      </div>
-      <div class="col-md-2" style="padding-top:30px;">
-        <div class="row">
-          <div class="col-md-2">
-            <div class="round"><span>3</span></div>
-          </div>
-          <div class="col-md-10">
-            <div class="line"></div>
-          </div>
-        </div>
-        <div class="row">
-          <span>等待客服审核</span>
-        </div>
-      </div>
-      <div class="col-md-2" style="padding-top:30px;">
-        <div class="row">
-          <div class="col-md-2">
-            <div class="round">
-              <div class="round"><span>4</span></div>
-            </div>
-          </div>
-          <div class="col-md-10">
-            <div class="line"></div>
-          </div>
-        </div>
-        <div class="row">
-          <span>审核完成</span>
-        </div>
-      </div>
+      <app-step step="1" roundClass="round blue" lineClass="line on" label="填写基本信息"></app-step>
+      <app-step step="2" roundClass="round" lineClass="line" label="完善验厂认证"></app-step>
+      <app-step step="3" roundClass="round" lineClass="line" label="等待客服审核"></app-step>
+      <app-step step="4" roundClass="round" lineClass="line" label="审核完成"></app-step>
+      <!--<div class="col-md-2" style="padding-top:30px;">-->
+        <!--<div class="row">-->
+          <!--<div class="col-md-2">-->
+            <!--<div class="round blue"><span>1</span></div>-->
+          <!--</div>-->
+          <!--<div class="col-md-10">-->
+            <!--<div class="line on"></div>-->
+          <!--</div>-->
+        <!--</div>-->
+        <!--<div class="row">-->
+          <!--<span>填写基本信息</span>-->
+        <!--</div>-->
+      <!--</div>-->
+      <!--<div class="col-md-2" style="padding-top:30px;">-->
+        <!--<div class="row">-->
+          <!--<div class="col-md-2">-->
+            <!--<div class="round"><span>2</span></div>-->
+          <!--</div>-->
+          <!--<div class="col-md-10">-->
+            <!--<div class="line"></div>-->
+          <!--</div>-->
+        <!--</div>-->
+        <!--<div class="row">-->
+          <!--<span>完善验厂认证</span>-->
+        <!--</div>-->
+      <!--</div>-->
+      <!--<div class="col-md-2" style="padding-top:30px;">-->
+        <!--<div class="row">-->
+          <!--<div class="col-md-2">-->
+            <!--<div class="round"><span>3</span></div>-->
+          <!--</div>-->
+          <!--<div class="col-md-10">-->
+            <!--<div class="line"></div>-->
+          <!--</div>-->
+        <!--</div>-->
+        <!--<div class="row">-->
+          <!--<span>等待客服审核</span>-->
+        <!--</div>-->
+      <!--</div>-->
+      <!--<div class="col-md-2" style="padding-top:30px;">-->
+        <!--<div class="row">-->
+          <!--<div class="col-md-2">-->
+            <!--<div class="round">-->
+              <!--<div class="round"><span>4</span></div>-->
+            <!--</div>-->
+          <!--</div>-->
+          <!--<div class="col-md-10">-->
+            <!--<div class="line"></div>-->
+          <!--</div>-->
+        <!--</div>-->
+        <!--<div class="row">-->
+          <!--<span>审核完成</span>-->
+        <!--</div>-->
+      <!--</div>-->
       <div class="col-md-2"></div>
     </div>
   </div>
   <div class="regPart" style="margin-left: 38%;margin-top:20px;width:380px;">
 
     <span style="padding-left: 266px;color:#AEAEAE">已有账号？<a href="#nowhere" [routerLink]="['/login']" style="color:#FFB717;" class="yellow">请登录</a></span>
-    <form class="form-horizontal" role="form" style="margin-top:30px;" [formGroup]="regForm" (ngSubmit)="onSubmit()">
-      <div class="form-group">
-        <span for="mobilenumber" class="col-md-3" style="padding-top: 10px;color:#000;">手机号码</span>
-        <div class="col-md-6">
-          <input type="text" class="form-control" name="mobileNumber" placeholder="请输入手机号" formControlName="mobileNumber">
-        </div>
-      </div>
-      <div class="form-group">
-        <span for="checkcode" class="col-md-3" style="padding-top: 10px;color:#000;">手机验证码</span>
-        <div class="col-md-5">
-          <div class="input-group">
-            <input type="text" class="form-control" id="checkcode" placeholder="请输入手机验证码" formControlName="checkCode">
-          </div>
-        </div>
-        <div class="col-md-4" style="padding-left:0;">
-          <button class="btn btn-link" type="button" (click)="getIdentifyCode()" [disabled]="isDisabled" style="border:none;background: #f2f2f2;width:113%;height:43px;color:#6D6D6D;font-size:16px;text-decoration: none;" >{{codeMsg}}</button>
-        </div>
-      </div>
-      <div class="form-group">
-        <span for="password" class="col-md-3" style="padding-top: 10px;color:#000;">设置密码</span>
-        <div class="col-md-6">
-          <input type="password" class="form-control" id="password" placeholder="请输入密码" formControlName="passWord">
-        </div>
-      </div>
-      <div class="form-group">
-        <span for="company" class="col-md-3" style="padding-top: 10px;color:#000;">公司名称</span>
-        <div class="col-md-6">
-          <input type="text" class="form-control" id="company" placeholder="请输入公司名称" formControlName="companyName">
-        </div>
-      </div>
-      <div class="form-group">
-        <span for="contact" class="col-md-3" style="padding-top: 10px;color:#000;">联系人</span>
-        <div class="col-md-6">
-          <input type="text" class="form-control" id="contact" placeholder="请输入联系人" formControlName="contactName">
-        </div>
-      </div>
+    <form class="form-horizontal" role="form" style="width:380px;margin-top:30px;" #baseinfo="ngForm">
+      <!--<div class="form-group">-->
+        <!--<span for="mobilenumber" class="col-md-3" style="padding-top: 10px;color:#000;">手机号码</span>-->
+        <!--<div class="col-md-6">-->
+          <!--<input type="text" class="form-control" name="mobileNumber" placeholder="请输入手机号" name="MobileNumber" [(ngModel)]="MobileNumber" ngDefaultControl>-->
+        <!--</div>-->
+      <!--</div>-->
+
+      <app-input type="text" placeholder="请输入手机号" labelText="手机号" name="MobileNumber" [(ngModel)]="MobileNumber"  ngDefaultControl></app-input>
+      <!--<div class="form-group">-->
+        <!--<span for="checkcode" class="col-md-3" style="padding-top: 10px;color:#000;">手机验证码</span>-->
+        <!--<div class="col-md-5">-->
+          <!--<div class="input-group">-->
+            <!--<input type="text" class="form-control" id="checkcode" placeholder="请输入手机验证码">-->
+          <!--</div>-->
+        <!--</div>-->
+        <!--<div class="col-md-4" style="padding-left:0;">-->
+          <!--<button class="btn btn-link" type="button" (click)="getIdentifyCode()" [disabled]="isDisabled" style="border:none;background: #f2f2f2;width:113%;height:43px;color:#6D6D6D;font-size:16px;text-decoration: none;" >{{codeMsg}}</button>-->
+        <!--</div>-->
+      <!--</div>-->
+      <!--<app-phone-check-code [(ngModel)]="VerificationCode" name="VerificationCode" ngDefaultControl></app-phone-check-code>-->
+      <app-phone-check-code [phone]="MobileNumber" [(ngModel)]="VerificationCode" name="VerificationCode" ngDefaultControl></app-phone-check-code>
+      <app-input type="password" placeholder="请输入密码" labelText="设置密码" name="Password" [(ngModel)]="Password" ngDefaultControl ></app-input>
+      <app-input type="text" placeholder="请输入公司名称" labelText="公司名称" name="CompanyName" [(ngModel)]="CompanyName" ngDefaultControl ></app-input>
+      <app-input type="text" placeholder="请输入联系人" labelText="联系人" name="ContactName" [(ngModel)]="Contacter" ngDefaultControl ></app-input>
+      <!--<div class="form-group">-->
+        <!--<span for="password" class="col-md-3" style="padding-top: 10px;color:#000;">设置密码</span>-->
+        <!--<div class="col-md-6">-->
+          <!--<input type="password" class="form-control" id="password" placeholder="请输入密码" >-->
+        <!--</div>-->
+        <!--&lt;!&ndash;<div *ngIf="regForm.get('passWord').hasError('required') && user.get('passWord').touched" class="error">&ndash;&gt;-->
+          <!--&lt;!&ndash;密码是必填项&ndash;&gt;-->
+        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+      <!--</div>-->
+      <!--<div class="form-group">-->
+        <!--<span for="company" class="col-md-3" style="padding-top: 10px;color:#000;">公司名称</span>-->
+        <!--<div class="col-md-6">-->
+          <!--<input type="text" class="form-control" id="company" placeholder="请输入公司名称" >-->
+        <!--</div>-->
+      <!--</div>-->
+      <!--<div class="form-group">-->
+        <!--<span for="contact" class="col-md-3" style="padding-top: 10px;color:#000;">联系人</span>-->
+        <!--<div class="col-md-6">-->
+          <!--<input type="text" class="form-control" id="contact" placeholder="请输入联系人" >-->
+        <!--</div>-->
+      <!--</div>-->
+      <!--<p *ngIf="!mobileNumber.valid" class="error">*请输入正确的手机号！</p>-->
+      <p style="margin:10px;color:red;">{{ErrorMsg}}</p>
       <div class="row" style="margin-top:40px;">
-        <input type="checkbox" class="col-md-1 check">
+        <input type="checkbox" class="col-md-1 check" name="CheckBox" [(ngModel)]="CheckBox">
         <div class="col-md-11" style="padding-right:0px;">
           <span style="color:#6D6D6D;">我已认真阅读并同意</span><a href="#nowhere" class="yellow" data-toggle="modal" data-target="#myModal" style="color:#FFB717;text-decoration: none;">《易智造云工厂竞标系统用户条款》</a>
           <p style="padding:10px 0;">会员认证还差一步，完善会员认证，即可开始参与竞标。</p>
@@ -125,11 +141,12 @@
       <!--<div *ngIf="!mobileNumber.valid && mobileNumber.touched " class="wrong-tip">请输入有效手机号码！</div>-->
       <!--<div *ngIf="!passWord.valid && passWord.touched " class="wrong-tip">密码不少于6位！</div>-->
       <div class="row" style="margin-top: 20px;">
-        <button type="submit" class="btn btn-block btn-primary" style="width:393px;height:42px;color:#fff;" [routerLink]="['./factoryinfo']">下一步</button>
+        <button type="submit" class="btn btn-block btn-primary" [disabled]="baseinfo.form.invalid || !CheckBox" style="height:42px;color:#fff;" (click)="onSubmit()">下一步</button>
         <!--<router-outlet></router-outlet>-->
       </div>
+      <p style="padding:10px;color:red;">{{tip}}</p>
     </form>
-
-
+    <!--<p>Form Value: {{ regForm.value | json }}</p>-->
+    <!--<p>Form Value: {{ regForm.status | json }}</p>-->
   </div>
 </div>

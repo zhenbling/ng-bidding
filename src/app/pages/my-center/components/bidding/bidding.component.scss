@@ -1,0 +1,31 @@
+$fontcolory: #FF9900;
+$backcolordg: #f2f2f2;
+$bordercolor: #cccccc;
+$color: #4cdbec;
+.my-content{
+  width: 944px;height: 822px;background: white;
+}
+header{color: $fontcolory;border-bottom: 2px solid $fontcolory;padding: 10px;}
+.item-title{height: 52px;line-height: 52px;background-color: #f2f2f2}
+.item-title .time{margin: 0 20px 0 15px;}
+.biding-content{background-color: $backcolordg;padding: 0 4px 8px 4px;overflow: hidden}
+.pull-left{padding: 10px;background-color: white;
+}
+small{padding: 3px 6px;background-color: #e4e4e4;margin-right: 5px;border-radius: 4px;
+}
+.center-text div{border-left:1px solid $bordercolor;border-right:1px solid $bordercolor;height:86px;line-height:86px;text-align: center;width: 162px }
+.center-text div span{color: $color}
+.center-text div small{background-color: white}
+.center-right{width: 331px;}
+.center-right div{
+  width: 274px;overflow: hidden;margin: auto
+}
+.center-right div .btn-primary{
+  height: 32px;
+  line-height: 11px;
+  margin-top: 9px;
+  width: 89px;
+  background-color: $color;
+  border-width: 0;
+}
+.count span{color: $fontcolory}

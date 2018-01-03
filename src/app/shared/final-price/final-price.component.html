@@ -1,13 +1,20 @@
-<button type="button" class="btn btn-primary" (click)="openModal(template)">Create template modal</button>
+<button type="button" class="btn btn-default btn-block" (click)="openModal(template)">一口价</button>
 
 <ng-template #template>
   <div class="modal-header">
-    <h4 class="modal-title pull-left">Modal</h4>
+    <h4 class="modal-title pull-left">一口价</h4>
     <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
       <span aria-hidden="true">&times;</span>
     </button>
   </div>
   <div class="modal-body">
-    This is a modal.
+     <p>本次一口价为：<span>6789.00</span>元</p>
+     <div>
+       <span>一口价：</span>
+       <input type="number" [(ngModel)]="finalPrice">
+       <span>RMB</span>
+     </div>
+     <button class="btn btn-primary">确定</button>
+    <p>温馨提示：竞标成功后不能弃标，弃标要扣除弃标费用</p>
   </div>
 </ng-template>

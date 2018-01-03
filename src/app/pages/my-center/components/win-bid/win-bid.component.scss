@@ -1,0 +1,53 @@
+$fontcolory: #FF9900;
+$backcolordg: #f2f2f2;
+$bordercolor: #cccccc;
+$color: #4cdbec;
+.my-content{
+  width: 944px;height: 822px;background: white;
+}
+header{color: $fontcolory;border-bottom: 2px solid $fontcolory;padding: 10px;}
+.item-title{height: 52px;line-height: 52px;background-color: #f2f2f2}
+.item-title .time{margin: 0 20px 0 15px;}
+.biding-content{background-color: $backcolordg;padding: 0 4px 8px 4px;overflow: hidden}
+.pull-left{padding: 10px;background-color: white;
+}
+small{padding: 3px 6px;background-color: #e4e4e4;margin-right: 5px;border-radius: 4px;
+}
+.center-text div{border-left:1px solid $bordercolor;border-right:1px solid $bordercolor;height:86px;padding-top: 22px;text-align: center;width: 162px }
+.center-text div p label,.center-text div p small{color: $color;font-weight: normal}
+.center-text div span{color: $fontcolory}
+.center-text div small{background-color: white}
+.center-right{width: 331px;height: 106px;}
+.center-right div{
+  width: 274px;overflow: hidden;margin: auto
+}
+.center-right .btn-default{
+  height: 32px;
+  line-height: 11px;
+  width: 89px;
+  background-color: #FF0000;
+  border-width: 0;
+  display: block;
+  margin: auto;
+  color: white;
+  margin-top: 29px;
+  cursor:default;
+}
+.count span{color: $fontcolory}
+.img-par{position: relative;overflow: hidden}
+.img-par:before{
+  content: "已中标";
+  position: absolute;
+  left: -29px;
+  top: 9px;
+  padding: 1px 28px;
+  background-color: #D4282E;
+  color: white;
+  transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  font-size: 12px;
+
+}
